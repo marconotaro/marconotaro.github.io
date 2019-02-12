@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<head>
+<title>Exercises Solutions</title>
+<style>
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+.highlight * { font-family: monospace; }
+.highlight { font-size: 13px; }
+.highlight { line-height: normal; }
+.highlight .err { border: none !important }
+</style>
+</head>
+<body>
+<div class="highlight"><pre><span class="c1">################</span>
+<span class="c1">## EXERCISE 3 ##</span>
+<span class="c1">################</span>
+
+<span class="c1">#0. read data from file</span>
+marks <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">&quot;dati_esercitazione_voti.txt&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span>header<span class="o">=</span><span class="bp">T</span><span class="p">);</span>   <span class="c1">##write: col1; oral.1: col2; oral.2: col3, oral.3: col4</span>
+
+<span class="c1">#1. compute mean and variance of written marks</span>
+mw <span class="o">&lt;-</span> <span class="kp">mean</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">]);</span>
+vw <span class="o">&lt;-</span> var<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">]);</span>
+
+<span class="c1">#2. compute mean and variance of oral_1 marks</span>
+mo <span class="o">&lt;-</span> <span class="kp">mean</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+vo <span class="o">&lt;-</span> var<span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+
+<span class="c1">#3.0 written: relative frequency plot</span>
+wfr <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">);</span>
+plot<span class="p">(</span>wfr<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;written_marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkblue&quot;</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="kp">unique</span><span class="p">(</span>wfr<span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>cex.axis<span class="o">=</span><span class="m">0.8</span><span class="p">);</span>
+
+
+<span class="c1">######################################</span>
+<span class="c1">## case study A: written vs oral_1  ##</span>
+<span class="c1">######################################</span>
+<span class="c1">### written and oral_1 test marks are similar (same mean, variance and distribution), but they are independent variables (see covariance and correlation)</span>
+
+<span class="c1">#3.1 oral_1: relative frequency plot</span>
+o1fr <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">);</span>
+plot<span class="p">(</span>o1fr<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_1_marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkgreen&quot;</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">],</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="kp">unique</span><span class="p">(</span>o1fr<span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>cex.axis<span class="o">=</span><span class="m">0.8</span><span class="p">);</span>
+
+<span class="c1">#4 empirical cumulative function between written and oral_1 marks</span>
+<span class="c1">##way 1</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">]),</span>main<span class="o">=</span><span class="s">&quot;marks distribution comparison between written and oral_1 marsk test&quot;</span><span class="p">);</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]),</span>add<span class="o">=</span><span class="bp">T</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">);</span>
+<span class="c1">##way 2</span>
+co <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+cw <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+plot<span class="p">(</span><span class="kp">names</span><span class="p">(</span>cw<span class="p">),</span>cw<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;marks distribution comparison between written and oral_1 marsk test&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;F(x)&quot;</span><span class="p">);</span>
+lines<span class="p">(</span><span class="kp">names</span><span class="p">(</span>co<span class="p">),</span>co<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">);</span>
+
+<span class="c1">#5 contingency table</span>
+<span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+my.contingency.table <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span>y<span class="p">){</span>
+xf <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>x<span class="p">);</span>
+yf <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>y<span class="p">);</span>
+
+m <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="kp">length</span><span class="p">(</span>xf<span class="p">),</span><span class="kp">length</span><span class="p">(</span>yf<span class="p">));</span>
+<span class="kp">dimnames</span><span class="p">(</span>m<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">list</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>xf<span class="p">),</span><span class="kp">names</span><span class="p">(</span>yf<span class="p">));</span>
+
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="kp">rownames</span><span class="p">(</span>m<span class="p">)){</span>
+z <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>y<span class="p">[</span><span class="kp">which</span><span class="p">(</span>x<span class="o">==</span>i<span class="p">)]);</span>     <span class="c1">##z &lt;- absolute.frequency(y[which(x==i)])   (see analisidati.R) </span>
+m<span class="p">[</span>i<span class="p">,</span><span class="kp">names</span><span class="p">(</span>z<span class="p">)]</span> <span class="o">&lt;-</span> z<span class="p">;</span>
+<span class="p">}</span>
+m<span class="p">;</span>
+<span class="p">}</span>
+my.contingency.table<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+
+<span class="c1">#6. oral_1: scatter plot </span>
+plot<span class="p">(</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>pch<span class="o">=</span><span class="m">20</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_1&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;written&quot;</span><span class="p">);</span>
+
+<span class="c1">#7. correlation and covariance</span>
+cov<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+cor<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">2</span><span class="p">]);</span>
+
+
+<span class="c1">######################################</span>
+<span class="c1">## case study B: written vs oral_2  ##</span>
+<span class="c1">######################################</span>
+<span class="c1">### written and oral_2 test marks are dependent but not linearly related (see covariance and correlation)</span>
+
+<span class="c1">#8 oral_2: relative frequency plot</span>
+o2fr <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">);</span>
+plot<span class="p">(</span>o2fr<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_2_marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkgreen&quot;</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">],</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="kp">unique</span><span class="p">(</span>o2fr<span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>cex.axis<span class="o">=</span><span class="m">0.8</span><span class="p">);</span>
+
+<span class="c1">#9. empirical cumulative function between written and oral_1 marks</span>
+<span class="c1">##way 1</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">]),</span>main<span class="o">=</span><span class="s">&quot;marks distribution comparison between written and oral_2 marks test&quot;</span><span class="p">);</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">]),</span>add<span class="o">=</span><span class="bp">T</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">);</span>
+<span class="c1">##way 2</span>
+co <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+cw <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+plot<span class="p">(</span><span class="kp">names</span><span class="p">(</span>cw<span class="p">),</span>cw<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;marks distribution comparison between written and oral_2 marks test&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;F(x)&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;marks&quot;</span><span class="p">);</span>
+lines<span class="p">(</span><span class="kp">names</span><span class="p">(</span>co<span class="p">),</span>co<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">);</span>
+
+<span class="c1">#10. contingency table</span>
+<span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">])</span>      <span class="c1">##my.contingency.table(marks[,1],marks[,3])</span>
+
+<span class="c1">#11. oral_1: scatter plot </span>
+plot<span class="p">(</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>pch<span class="o">=</span><span class="m">20</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_2&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;written&quot;</span><span class="p">);</span>
+
+<span class="c1">#12. correlation and covariance</span>
+cov<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">]);</span>
+cor<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">3</span><span class="p">]);</span>
+
+
+<span class="c1">######################################</span>
+<span class="c1">## case study C: written vs oral_3  ##</span>
+<span class="c1">######################################</span>
+<span class="c1">### written and oral_3 test marks have different mean, variance and distribution, but they are linearly related</span>
+
+<span class="c1">#13 oral_3: relative frequency plot</span>
+o3fr <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">);</span>
+plot<span class="p">(</span>o3fr<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_3_marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkgreen&quot;</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">],</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="kp">unique</span><span class="p">(</span>o3fr<span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>cex.axis<span class="o">=</span><span class="m">0.8</span><span class="p">);</span>
+
+<span class="c1">#14. empirical cumulative function between written and oral_1 marks</span>
+<span class="c1">##way 1</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">]),</span>main<span class="o">=</span><span class="s">&quot;marks distribution comparison between written and oral_3 marks test&quot;</span><span class="p">);</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">]),</span>add<span class="o">=</span><span class="bp">T</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">);</span>
+<span class="c1">##way 2</span>
+co <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+cw <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">])</span><span class="o">/</span><span class="kp">nrow</span><span class="p">(</span>marks<span class="p">));</span>
+plot<span class="p">(</span><span class="kp">names</span><span class="p">(</span>co<span class="p">),</span>co<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;marks distribution: comparison between written and oral_3 test marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;F(x)&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;marks&quot;</span><span class="p">);</span>
+lines<span class="p">(</span><span class="kp">names</span><span class="p">(</span>cw<span class="p">),</span>cw<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">);</span>
+
+<span class="c1">#15. contingency table</span>
+<span class="kp">table</span><span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">])</span>      <span class="c1">##my.contingency.table(marks[,1],marks[,4])</span>
+
+<span class="c1">#16. oral_1: scatter plot </span>
+plot<span class="p">(</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>pch<span class="o">=</span><span class="m">20</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;oral_2&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;written&quot;</span><span class="p">);</span>
+
+<span class="c1">#17. correlation and covariance</span>
+cov<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">]);</span>
+cor<span class="p">(</span>marks<span class="p">[,</span><span class="m">1</span><span class="p">],</span>marks<span class="p">[,</span><span class="m">4</span><span class="p">]);</span>
+</pre></div>
+
+</body>
+</html>

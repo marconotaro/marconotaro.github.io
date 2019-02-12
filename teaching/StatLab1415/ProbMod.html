@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Probabilistic Models</title>
+<style>
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+.highlight * { font-family: monospace; }
+.highlight { font-size: 13px; }
+.highlight { line-height: normal; }
+.highlight .err { border: none !important }
+</style>
+</head>
+<body>
+<div class="highlight"><pre><span class="c1">#### MODELLI PROBABILISTICI DISCRETI #####</span>
+<span class="c1">######################</span>
+<span class="c1">#### BERNOULLIANA ####  </span>
+<span class="c1">######################</span>
+<span class="c1"># coins experiment </span>
+x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">()</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">30000</span><span class="p">)</span> x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span><span class="kp">sum</span><span class="p">(</span>rbinom<span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0.5</span><span class="p">)))</span>
+y <span class="o">&lt;-</span> <span class="kp">sort</span><span class="p">(</span><span class="kp">unique</span><span class="p">(</span>x<span class="p">))</span>
+dx <span class="o">&lt;-</span> dbinom<span class="p">(</span>y<span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">0.5</span><span class="p">)</span>
+px <span class="o">&lt;-</span> pbinom<span class="p">(</span>y<span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">0.5</span><span class="p">)</span>
+plot<span class="p">(</span>y<span class="p">,</span>dx<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">)</span>  <span class="c1"># plot(x,dbinom(x,100,0.5))</span>
+plot<span class="p">(</span>y<span class="p">,</span>px<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>  <span class="c1"># plot(sort(x),pbinom(sort(x),100,0.5))</span>
+lines<span class="p">(</span>ecdf<span class="p">(</span>x<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+var<span class="p">(</span>x<span class="p">)</span>  <span class="c1"># commentare....    </span>
+sd<span class="p">(</span>x<span class="p">)</span>   <span class="c1"># commentare....</span>
+
+<span class="c1"># urn experiment (50 balls, 5=white 45=black)</span>
+x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">()</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">)</span> x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span><span class="kp">sum</span><span class="p">(</span>rbinom<span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0.1</span><span class="p">)))</span>
+plot<span class="p">(</span><span class="kp">sort</span><span class="p">(</span>x<span class="p">),</span>pbinom<span class="p">(</span><span class="kp">sort</span><span class="p">(</span>x<span class="p">),</span><span class="m">100</span><span class="p">,</span><span class="m">0.1</span><span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
+lines<span class="p">(</span>ecdf<span class="p">(</span>x<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+var<span class="p">(</span>x<span class="p">)</span>  <span class="c1"># commentare....</span>
+sd<span class="p">(</span>x<span class="p">)</span>   <span class="c1"># commentare....</span>
+
+<span class="c1">#####################</span>
+<span class="c1">#### BINOMIALE  #####</span>
+<span class="c1">#####################</span>
+<span class="c1"># massa di prob (fx)</span>
+x <span class="o">&lt;-</span> <span class="m">0</span><span class="o">:</span><span class="m">100</span>
+y <span class="o">&lt;-</span> dbinom<span class="p">(</span>x<span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">0.2</span><span class="p">)</span>
+plot<span class="p">(</span>x<span class="p">,</span>y<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">)</span>
+points<span class="p">(</span>x<span class="p">,</span>y<span class="p">,</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+title<span class="p">(</span><span class="s">&quot;Distribuzione Binomiale-n=10,p=0.2&quot;</span><span class="p">)</span>
+<span class="c1">## ripartizione (Fx)</span>
+z <span class="o">&lt;-</span> pbinom<span class="p">(</span>x<span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">0.2</span><span class="p">)</span>
+plot<span class="p">(</span>x<span class="p">,</span>z<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
+points<span class="p">(</span>x<span class="p">,</span>z<span class="p">,</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+
+<span class="c1">## fx (vario p)</span>
+par<span class="p">(</span>mfcol<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
+p <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.9</span><span class="p">,</span><span class="m">0.1</span><span class="p">)</span>
+col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span> plot<span class="p">(</span>dbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>main<span class="o">=</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;bin n=20, p=&quot;</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">],</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="c1">## Fx  (vario p)</span>
+par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
+p <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.9</span><span class="p">,</span><span class="m">0.1</span><span class="p">)</span>
+col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span> plot<span class="p">(</span>pbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">1000</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>main<span class="o">=</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;bin n=20, p=&quot;</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">],</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> 
+
+<span class="c1"># fx(vario n)</span>
+p <span class="o">&lt;-</span> <span class="m">0.2</span>
+n <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">10</span><span class="p">)</span>
+col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="m">9</span><span class="p">)</span>
+plot<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span>dbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">0.2</span><span class="p">)),</span>xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>type<span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>n<span class="p">))</span> lines<span class="p">(</span>dbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">[</span>i<span class="p">],</span>n<span class="p">[</span>i<span class="p">],</span><span class="m">0.2</span><span class="p">),</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">])</span>
+
+<span class="c1"># Fx(vario n)</span>
+p <span class="o">&lt;-</span> <span class="m">0.2</span>
+n <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">10</span><span class="p">)</span>
+col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="m">9</span><span class="p">)</span>
+plot<span class="p">(</span>pbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>type<span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>n<span class="p">))</span> lines<span class="p">(</span>pbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">[</span>i<span class="p">],</span>n<span class="p">[</span>i<span class="p">],</span><span class="m">0.2</span><span class="p">),</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">])</span>
+
+<span class="c1"># qbinom: numero di successi in n prove</span>
+<span class="c1"># esempio lanciando una moneta 50 volte qual è il numero mediano (quantile=50) di successi? qbinom(0.5,50,0.5)</span>
+<span class="c1"># fare esercizio 5 </span>
+
+<span class="c1">#########################</span>
+<span class="c1">#### IPERGEOMETRICA  ####</span>
+<span class="c1">#########################</span>
+<span class="c1"># formula + esempio urna....</span>
+
+<span class="c1"># ipergeometrica e binomiale a confronto</span>
+<span class="c1"># aumento elementi dell&#39;urna mantenendo costante frazione di successi(p=0.1)  </span>
+k<span class="o">&lt;-</span><span class="m">50</span>
+m<span class="o">=</span><span class="m">500</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">)</span>
+p<span class="o">&lt;-</span>k<span class="o">/</span>m
+plot<span class="p">(</span>x<span class="p">,</span>dhyper<span class="p">(</span>x<span class="p">,</span>k<span class="p">,</span>m<span class="o">-</span>k<span class="p">,</span>n<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+points<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+lines<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+k<span class="o">&lt;-</span><span class="m">500</span>
+m<span class="o">=</span><span class="m">5000</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">)</span>
+p<span class="o">&lt;-</span>k<span class="o">/</span>m
+plot<span class="p">(</span>x<span class="p">,</span>dhyper<span class="p">(</span>x<span class="p">,</span>k<span class="p">,</span>m<span class="o">-</span>k<span class="p">,</span>n<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+points<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+lines<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+k<span class="o">&lt;-</span><span class="m">5000</span>
+m<span class="o">=</span><span class="m">50000</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">)</span>
+p<span class="o">&lt;-</span>k<span class="o">/</span>m
+plot<span class="p">(</span>x<span class="p">,</span>dhyper<span class="p">(</span>x<span class="p">,</span>k<span class="p">,</span>m<span class="o">-</span>k<span class="p">,</span>n<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+points<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+lines<span class="p">(</span>x<span class="p">,</span> dbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="c1"># funzione di ripartizione</span>
+k<span class="o">&lt;-</span><span class="m">50</span>
+m<span class="o">=</span><span class="m">500</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">)</span>
+p<span class="o">&lt;-</span>k<span class="o">/</span>m
+plot<span class="p">(</span>x<span class="p">,</span>phyper<span class="p">(</span>x<span class="p">,</span>k<span class="p">,</span>m<span class="o">-</span>k<span class="p">,</span>n<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>axes<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+par<span class="p">(</span>new<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+plot<span class="p">(</span>x<span class="p">,</span>pbinom<span class="p">(</span>x<span class="p">,</span>n<span class="p">,</span>p<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># simulazione dell&#39;estrazione di x elementi da una popolazione ipergeometrica di parametri k, m e n:</span>
+k<span class="o">&lt;-</span><span class="m">20</span>
+m<span class="o">&lt;-</span><span class="m">100</span>
+x<span class="o">&lt;-</span><span class="m">100</span>
+n<span class="o">=</span><span class="m">10</span>
+valori_simulati <span class="o">&lt;-</span>rhyper<span class="p">(</span>x<span class="p">,</span> k<span class="p">,</span> m<span class="o">-</span>k<span class="p">,</span> n<span class="p">)</span>
+freq_hyper<span class="o">&lt;-</span><span class="kp">table</span><span class="p">(</span>valori_simulati<span class="p">)</span><span class="o">/</span>m
+plot<span class="p">(</span>freq_hyper<span class="p">,</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span>n<span class="p">))</span>
+
+<span class="c1"># confronto frequenze cumulate teoriche ed empiriche </span>
+k<span class="o">&lt;-</span><span class="m">20</span>
+m<span class="o">&lt;-</span><span class="m">100</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+x<span class="o">&lt;-</span><span class="m">100000</span>           <span class="c1"># rifare la simulazione settando x=10000. cosa succede?</span>
+plot<span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">,</span>phyper<span class="p">(</span><span class="m">0</span><span class="o">:</span>n<span class="p">,</span>k<span class="p">,</span>m<span class="o">-</span>k<span class="p">,</span>n<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
+valori_simulati <span class="o">&lt;-</span>rhyper<span class="p">(</span>x<span class="p">,</span> k<span class="p">,</span> m<span class="o">-</span>k<span class="p">,</span> n<span class="p">)</span>
+lines<span class="p">(</span>ecdf<span class="p">(</span>valori_simulati<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># quantili qhyper(prob, k, m-k,n) lower.tail = TRUE)</span>
+k<span class="o">&lt;-</span><span class="m">200</span>
+m<span class="o">=</span><span class="m">1000</span>
+n<span class="o">&lt;-</span><span class="m">10</span>
+prob<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.75</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+qhyper<span class="p">(</span>prob<span class="p">,</span> k<span class="p">,</span> m<span class="o">-</span>k<span class="p">,</span>n<span class="p">)</span>
+
+<span class="c1">######################</span>
+<span class="c1">#### GEOMETRICA  #####</span>
+<span class="c1">######################</span>
+<span class="c1"># fx</span>
+p <span class="o">&lt;-</span> <span class="m">0.3</span>
+x <span class="o">&lt;-</span> <span class="m">0</span><span class="o">:</span><span class="m">100</span>
+plot<span class="p">(</span>dgeom<span class="p">(</span>x<span class="p">,</span>p<span class="p">),</span>pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+points<span class="p">(</span>dgeom<span class="p">(</span>x<span class="p">,</span><span class="m">0.1</span><span class="p">),</span>pch<span class="o">=</span><span class="m">24</span><span class="p">)</span>
+
+<span class="c1"># Fx</span>
+p <span class="o">&lt;-</span> <span class="m">0.3</span>
+x <span class="o">&lt;-</span> <span class="m">0</span><span class="o">:</span><span class="m">100</span>
+plot<span class="p">(</span>x<span class="p">,</span>pgeom<span class="p">(</span>x<span class="p">,</span>p<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+lines<span class="p">(</span>x<span class="p">,</span>pgeom<span class="p">(</span>x<span class="p">,</span><span class="m">0.1</span><span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="c1"># quantili qgeom(p, prob, lower.tail = TRUE)</span>
+p<span class="o">&lt;-</span><span class="m">0.1</span>
+prob<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.75</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+qgeom<span class="p">(</span>prob<span class="p">,</span>p<span class="p">)</span>
+
+<span class="c1"># confronto delle frequenze dei valori simulati con grafico il della legge geometrica...cosa succede all&#39;aumentare di m?</span>
+p<span class="o">=</span><span class="m">0.1</span>
+m<span class="o">&lt;-</span><span class="m">10000</span>        <span class="c1"># m=1000000</span>
+valori_simulati<span class="o">&lt;-</span>rgeom<span class="p">(</span>m<span class="p">,</span>p<span class="p">)</span>
+freq_geom<span class="o">&lt;-</span><span class="kp">table</span><span class="p">(</span>valori_simulati<span class="p">)</span><span class="o">/</span>m
+plot<span class="p">(</span>freq_geom<span class="p">,</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">35</span><span class="p">))</span>
+points<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">35</span><span class="p">,</span> dgeom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">35</span><span class="p">,</span>p<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+
+<span class="c1">###################</span>
+<span class="c1">#### POISSON  #####</span>
+<span class="c1">###################</span>
+x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
+lambda <span class="o">&lt;-</span><span class="m">0.6</span>    <span class="c1">#0 &lt; lambda &lt;1: funzione decrescente</span>
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span> 
+
+lambda<span class="o">&lt;-</span><span class="m">10</span>      <span class="c1">#lambda intero: funzione bimodale</span>
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>       
+plot<span class="p">(</span>x<span class="p">,</span> ppois <span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
+
+lambda <span class="o">&lt;-</span><span class="m">4.5</span>    <span class="c1">#lambda non intero&gt;1: funzione unimodale</span>
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span> 
+plot<span class="p">(</span>x<span class="p">,</span> ppois <span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
+
+<span class="c1"># simulazione dell&#39;estrazione di m elementi da una popolazione poissoniana di parametro lambda e confronto delle frequenze </span>
+<span class="c1"># dei valori simulati con grafico il della legge di Poisson... cosa succede all&#39;aumentare di m?</span>
+lambda <span class="o">&lt;-</span><span class="m">1</span>
+m<span class="o">&lt;-</span><span class="m">500</span>      <span class="c1"># m = 50000</span>
+valori_simulati<span class="o">&lt;-</span>rpois<span class="p">(</span>m<span class="p">,</span> lambda<span class="p">)</span>
+freq_pois<span class="o">&lt;-</span><span class="kp">table</span><span class="p">(</span>valori_simulati<span class="p">)</span><span class="o">/</span>m
+plot<span class="p">(</span>freq_pois<span class="p">)</span>
+points<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>freq_pois<span class="p">),</span> dpois<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>freq_pois<span class="p">),</span> lambda<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+<span class="c1">##################################################################################################################################</span>
+<span class="c1">##################################################################################################################################</span>
+
+<span class="c1">#### MODELLI PROBABILISTICI CONTINUI ###</span>
+
+<span class="c1">###################</span>
+<span class="c1">#### UNIFORME  ####</span>
+<span class="c1">###################</span>
+
+<span class="c1"># dunif(x, min=0, max=1, log = FALSE)</span>
+dunif<span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">)</span>
+dunif<span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">6</span><span class="p">)</span>
+
+curve<span class="p">(</span>dunif<span class="p">(</span>x<span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">),</span> from<span class="o">=</span><span class="m">3</span><span class="p">,</span>to<span class="o">=</span><span class="m">7</span><span class="p">)</span>
+curve<span class="p">(</span>dunif<span class="p">(</span>x<span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">),</span> from<span class="o">=</span><span class="m">-2</span><span class="p">,</span>to<span class="o">=</span><span class="m">10</span><span class="p">)</span>
+
+<span class="c1"># punif(q, min=0, max=1, lower.tail = TRUE, log.p = FALSE)</span>
+curve<span class="p">(</span>punif<span class="p">(</span>x<span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">6</span><span class="p">),</span><span class="m">-1</span><span class="p">,</span><span class="m">10</span><span class="p">)</span>
+curve<span class="p">(</span>punif<span class="p">(</span>x<span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="m">-1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1"># quantili qunif(prob, min=0, max=1, lower.tail = TRUE, log.p = FALSE)</span>
+prob<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">0.75</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+qunif<span class="p">(</span>prob<span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+qunif<span class="p">(</span>prob<span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+
+<span class="c1"># runif(n, min=0, max=1)</span>
+m<span class="o">&lt;-</span><span class="m">100000</span>       <span class="c1"># provare con m=100000</span>
+a<span class="o">&lt;-</span><span class="m">0</span>        <span class="c1"># provare anche con a=5, b=10</span>
+b<span class="o">&lt;-</span><span class="m">1</span>
+valori_simulati<span class="o">&lt;-</span> runif<span class="p">(</span>m<span class="p">,</span> a<span class="p">,</span> b<span class="p">)</span>
+
+<span class="c1"># confronto delle frequenze dei valori simulati con grafico il della legge uniforme</span>
+hist<span class="p">(</span>valori_simulati<span class="p">,</span> freq<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+curve<span class="p">(</span>dunif<span class="p">(</span>x<span class="p">,</span>a<span class="p">,</span>b<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span>a<span class="p">,</span>b<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>    
+
+<span class="c1"># meglio confrontare le funzioni cumulative, soprattutto trattandosi di variabili casuali continue</span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>valori_simulati<span class="p">))</span>
+curve<span class="p">(</span>punif<span class="p">(</span>x<span class="p">,</span>a<span class="p">,</span>b<span class="p">),</span> <span class="m">0</span><span class="p">,</span> b<span class="p">,</span> add<span class="o">=</span><span class="kc">TRUE</span> <span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="c1">###################</span>
+<span class="c1">## ESPONENZIALE  ##</span>
+<span class="c1">###################</span>
+
+<span class="c1">#dexp(x,rate=1)</span>
+dexp<span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
+dexp<span class="p">(</span><span class="m">-2</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+
+curve<span class="p">(</span>dexp<span class="p">(</span>x<span class="p">,</span>rate<span class="o">=</span><span class="m">1</span><span class="p">),</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+rate <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>rate<span class="p">))</span> curve<span class="p">(</span>dexp<span class="p">(</span>x<span class="p">,</span> rate<span class="o">=</span>rate<span class="p">[</span>i<span class="p">]),</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>col<span class="o">=</span>i<span class="m">+1</span><span class="p">,</span>lty<span class="o">=</span>i<span class="m">+1</span><span class="p">)</span>
+
+curve<span class="p">(</span>pexp<span class="p">(</span>x<span class="p">),</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+rate <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+<span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>rate<span class="p">))</span> curve<span class="p">(</span>pexp<span class="p">(</span>x<span class="p">,</span> rate<span class="o">=</span>rate<span class="p">[</span>i<span class="p">]),</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>col<span class="o">=</span>i<span class="m">+1</span><span class="p">,</span>lty<span class="o">=</span>i<span class="m">+1</span><span class="p">)</span>
+
+<span class="c1"># simulazione...</span>
+<span class="c1"># rexp(n,rate=1)</span>
+m<span class="o">=</span><span class="m">10000</span>     <span class="c1">#poi provare m=10000</span>
+rate<span class="o">=</span><span class="m">0.5</span>
+valori_simulati<span class="o">&lt;-</span> rexp<span class="p">(</span>m<span class="p">,</span>rate<span class="p">)</span>
+hist<span class="p">(</span>valori_simulati<span class="p">,</span> freq<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> breaks<span class="o">=</span><span class="m">30</span><span class="p">)</span> 
+xinf<span class="o">=</span><span class="m">5</span><span class="o">*</span><span class="m">1</span><span class="o">/</span>rate
+curve<span class="p">(</span>dexp<span class="p">(</span>x<span class="p">,</span>rate<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> xinf<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
+
+<span class="c1"># confronto delle funzioni cumulative </span>
+plot<span class="p">(</span>ecdf<span class="p">(</span>valori_simulati<span class="p">))</span>
+curve<span class="p">(</span>pexp<span class="p">(</span>x<span class="p">,</span>rate<span class="p">),</span><span class="m">0</span><span class="p">,</span> xinf<span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span> <span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+
+</body>
+</html>
