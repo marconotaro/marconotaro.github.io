@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Google Analytics Tracking Code -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-90875446-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<title>Marco Notaro Research</title>
+	<!-- Google Analytics Tracking Code -->
+	<meta charset="UTF-8">	
+	<meta name="author" content="Marco Notaro">
+	<meta name="description" content="Marco Notaro WebSite">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to make the site responsive -->
+	<meta name="keywords" content="research activity, bioinformatics, computational biology, machine learning, hierarchical ensemble methods,
+		biological database, biological networks, R, Perl, Python, software libraries">
+	<link rel="shortcut icon" href="img/wolf.gif">	
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+
+<body>
+	<div id="container">    
+		<div id="header">
+			<a href="index.html" title="Marco Notaro"><img id="logo" src="img/marcologo.png" alt="Marco Notaro" height="50"></a>     
+		</div>
+
+		<div id="navigationbar"> 	
+			<div id="navigation">
+				<ul class="menubar">	
+					<li><b><a class="menubar" href="index.html">Home</a></b></li>
+					<li><b><a class="menubar" href="research.html">Research</a></b></li>
+					<li><b><a class="menubar" href="teaching.html">Teaching</a></b></li>
+					<li><b><a class="menubar" href="publications.html">Publications</a></b></li>
+					<li><b><a class="menubar" href="software.html">Software</a></b></li>
+					<li><b><a class="menubar" href="contact.html">Contact</a></b></li>
+					<li><b><a class="menubar" href="visitedplaces.html">Visited Places</a></b></li>
+				</ul>
+			</div> 		
+		</div>
+
+		<div class="bodycontainer">
+
+		<h3>Overview</h3>
+			<p> 
+				With deep-massive-parallel sequencing molecular biology is turning into a "<i>data-rich</i>" science. 
+				Thanks to Next-Generation Sequencers, Mass Spectrometry, Bioassay Technology and other Bioinformatics Big-Data Techniques 
+				it is nowadays possible to have at the same time both a "bird's eye" and a "magnified" overview on a biological sample.
+				But this huge amount of raw data is of little use without cutting-edge bioinformatics and biostatistics methodologies
+				able to disentangle, process, analyze, and interpret them. Therefore my research efforts are focused on the development 
+				and application of machine learning techniques for the analysis of complex biomolecular data.
+			</p>
+			<p>
+				I would like to strike a balance between two modes of doing research. On one hand I would like to focus on the design, 
+				development and application of novel computational, statistical and machine learning methods for analyzing and integrating different data 
+				sources to extract the interesting "<i>needles</i>"" of medical and biological insight from the big "<i>haystack</i>" of high-dimensional 
+				bio-molecular data.	On the other hand, I would like to package such approaches into modular, scalable and user-friendly 
+				software tools in order to make them available to the research community at large (have a look at my
+				<a href="software.html"> Software</a> page). 
+				<!-- So the last goal of my research is making cutting-edge bioinformatics methodologies and make them available to 
+				the research community at large.  -->
+			</p>
+			 
+		<h3>Bioinformatics vs Computational Biology</h3>
+			<p>
+				Even if Bioinformatics and Computational Biology are often considered synonymous, I believe they are conceptually
+				separated and it is worth distinguishing them.
+				<!-- separated by a slight difference and so it is worth distinguishing them: -->
+			</p>
+			<ul class="research">
+				<li class="research">
+					<b>Computational Biology</b>: is the study of Biology using computational techniques. The main goal of a 
+					computational biologist is to make new insights about Biology and living system. 
+					Then <b>Computational Biology</b> is about <b>Science</b>.
+				</li>
+				<li class="research">
+					<b>Bioinformatics</b>: is about the creation of new algorithms able to solve problems. The main goal of a 
+					bioinformatician is to build tools that can work on biological, medical and pharmaceutical data. 
+					Then <b>Bioinformatics</b> is about <b>Computer Science</b>.
+				</li>
+			</ul>
+			
+			<p>
+				When I <i>design</i> new methodologies I am involved in a Computer Science activity. 
+				I design algorithms not to solve just a single specific problem, but a class of similar problems in Medicine or Molecular Biology.
+			</p>
+			
+			<p>
+				When I use my software (or those of others) to <i>answer</i> biomedical questions, I am doing science and 
+				I am making inferences in the field of Molecular Biology or Medicine.
+			</p>
+
+			<p>
+				Anyway, despite the difference between Bioinformatics and Computational Biology sounds apparently easy and clear, 
+				I believe that dealing with complex computational issues without losing sight of the medical/biological point of view, 
+				is simultaneously challenging and captivating!!
+			</p>
+
+		<h3>Research Interests</h3>
+			<p>
+				My research interests touch the fields of Bioinformatics, Computational Biology and Machine Learning. More precisely,
+				my research lines can be grouped as follow:
+			</p>
+			<ol class="research">
+				<li class="research">
+					<b>BIO-MOLECULAR NETWORKS</b>:<br> analysis and construction of complex biomolecular networks by making use of database such as
+					<a href="http://string-db.org/">STRING</a>, <a href="https://thebiogrid.org/">BioGRID</a> and 
+					<a href="http://www.uniprot.org/">UniProt</a>;
+				</li>
+				<li class="research">
+					<b>FLAT LEARNING METHODS</b>:<br> application of both supervised and semi-supervised learning methods to make "flat" predictions,
+					i.e. predictions that do not consider the hierarchical structure of the label space;					
+				</li>
+				<li class="research">
+					<b>OUTPUT STRUCTURED PREDICTIONS</b>:<br> design and software implementation of hierarchical ensemble methods (HEMs) for the 
+					prediction of protein function (an open fundamental challenge in molecular biology) and for the prediction of human gene-abnormal 
+					phenotype associations (a crucial step to discover novel genes associated to Mendelian diseases). 
+					The HEMs' predictions are consistent with the ontology predictions, because they always obey to the "<i>true path rule</i>", 
+					the logical rule that governs the internal coherence of the biological ontologies, such as the Gene Ontology 
+					(<a href="http://www.geneontology.org/">GO</a>) and 
+					the Human Phenotype Ontology (<a href="http://human-phenotype-ontology.github.io/">HPO</a>).
+				</li>
+			</ol>
+		</div> <!-- end bodycontainer --> 
+		<div id="footer"></div>
+	</div>	<!-- end container --> 
+</body>
+</html>
+

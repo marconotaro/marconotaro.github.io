@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<head>
+<title>Exercises Solutions</title>
+<style>
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+.highlight * { font-family: monospace; }
+.highlight { font-size: 13px; }
+.highlight { line-height: normal; }
+.highlight .err { border: none !important }
+</style>
+</head>
+<body>
+<div class="highlight"><pre><span class="c1">################</span>
+<span class="c1">## EXERCISE 1 ##</span>
+<span class="c1">################</span>
+
+<span class="c1">#0. read data from file</span>
+marks <span class="o">&lt;-</span> <span class="kp">scan</span><span class="p">(</span><span class="s">&quot;marks.txt&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+
+<span class="c1">#1. absolute and relative frequency </span>
+abs.freq <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>marks<span class="p">);</span>
+rel.freq <span class="o">&lt;-</span> abs.freq<span class="o">/</span><span class="kp">length</span><span class="p">(</span>marks<span class="p">);</span>
+
+<span class="c1">#2. absolute and relative frequency bar diagram (and barplot)</span>
+<span class="c1">#pdf(file=&quot;C:/path/file.pdf&quot;);                                      ## save plots in a pdf file (e.g. path=/Users/Marco/Desktop/)--&gt;windows</span>
+<span class="c1">#par(mfrow=c(2,2));                                                 ## mfrow=c(nrows, ncols): fills in a matrix of nrows x ncols plots by rows</span>
+plot<span class="p">(</span>abs.freq<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>abs.freq<span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;absolute frequency bar diagram&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;absolute frequency&quot;</span><span class="p">);</span>
+points<span class="p">(</span><span class="kp">as.integer</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>abs.freq<span class="p">)),</span>abs.freq<span class="p">,</span>pch<span class="o">=</span><span class="m">3</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">);</span>           <span class="c1">##add points to the plot </span>
+abline<span class="p">(</span>h<span class="o">=</span>abs.freq<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>                                    <span class="c1">##add line to the plot </span>
+
+plot<span class="p">(</span>rel.freq<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq<span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;relative frequency bar diagram&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">);</span>
+points<span class="p">(</span><span class="kp">as.integer</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>rel.freq<span class="p">)),</span>rel.freq<span class="p">,</span>pch<span class="o">=</span><span class="m">3</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">);</span>
+abline<span class="p">(</span>h<span class="o">=</span>rel.freq<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>        
+
+barplot<span class="p">(</span>abs.freq<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>abs.freq<span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;absolute frequency barplot&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;absolute frequency&quot;</span><span class="p">);</span>
+bp <span class="o">&lt;-</span> barplot<span class="p">(</span>abs.freq<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">);</span>     <span class="c1">#variable &quot;bp&quot; is a matrix giving the coordinates of all the bar midpoints drawn on the x-axis</span>
+text<span class="p">(</span>y<span class="o">=</span>abs.freq<span class="m">+0.2</span><span class="p">,</span> x<span class="o">=</span>bp<span class="p">,</span> labels<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span>abs.freq<span class="p">),</span>xpd<span class="o">=</span><span class="bp">T</span><span class="p">);</span>    <span class="c1">## add labels to barplot </span>
+
+barplot<span class="p">(</span>rel.freq<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq<span class="p">)),</span>ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;relative frequency barplot&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">);</span>
+bp <span class="o">&lt;-</span> barplot<span class="p">(</span>rel.freq<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">);</span>     
+text<span class="p">(</span>y<span class="o">=</span>rel.freq<span class="m">+0.005</span><span class="p">,</span> x<span class="o">=</span>bp<span class="p">,</span> labels<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>rel.freq<span class="p">,</span><span class="m">3</span><span class="p">)),</span>xpd<span class="o">=</span><span class="bp">T</span><span class="p">,</span>cex<span class="o">=</span><span class="m">0.7</span><span class="p">);</span>
+<span class="c1">#dev.off();</span>
+
+<span class="c1">#3.0 Relative Frequency Pie Chart </span>
+rel.freq.perc <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span>rel.freq <span class="o">*</span> <span class="m">100</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
+lbs <span class="o">&lt;-</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>rel.freq<span class="p">),</span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="s">&quot;(&quot;</span><span class="p">,</span>rel.freq.perc<span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">,</span><span class="s">&quot;)&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+pie<span class="p">(</span>rel.freq<span class="p">,</span>labels<span class="o">=</span>lbs<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq<span class="p">)),</span>main<span class="o">=</span><span class="s">&quot;Relative Frequency Pie Chart &quot;</span><span class="p">);</span>
+<span class="c1">#3.1 Relative Frequency Pie Chart for the following intervals of marks: (18,24](24,25](25,29](29,30]</span>
+int.marks <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">18</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">29</span><span class="p">,</span><span class="m">30</span><span class="p">);</span>
+class.marks <span class="o">&lt;-</span> <span class="kp">cut</span><span class="p">(</span>marks<span class="p">,</span> breaks<span class="o">=</span> int.marks<span class="p">);</span>
+freq.class <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>class.marks<span class="p">);</span>
+freq.class.perc <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span>freq.class<span class="o">/</span><span class="kp">length</span><span class="p">(</span>class.marks<span class="p">),</span><span class="m">2</span><span class="p">);</span>
+lbs <span class="o">&lt;-</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>freq.class.perc<span class="p">),</span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="s">&quot;(&quot;</span><span class="p">,</span>freq.class.perc<span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">,</span><span class="s">&quot;)&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+pie<span class="p">(</span>freq.class<span class="p">,</span>labels<span class="o">=</span>lbs<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>freq.class<span class="p">)));</span>
+<span class="c1">##3D Pie Chart</span>
+<span class="kn">library</span><span class="p">(</span>plotrix<span class="p">);</span>
+lbs <span class="o">&lt;-</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>rel.freq<span class="p">),</span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="s">&quot;(&quot;</span><span class="p">,</span>rel.freq.perc<span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">,</span><span class="s">&quot;)&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+pie3D<span class="p">(</span>rel.freq.perc<span class="p">,</span>labels<span class="o">=</span>lbs<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq.perc<span class="p">)),</span>main<span class="o">=</span><span class="s">&quot;Relative Frequency Pie Chart&quot;</span><span class="p">,</span>explode<span class="o">=</span><span class="m">0.1</span><span class="p">,</span>radius<span class="o">=</span><span class="m">2</span><span class="p">);</span>
+lbs <span class="o">&lt;-</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>freq.class.perc<span class="p">),</span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="s">&quot;(&quot;</span><span class="p">,</span>freq.class.perc<span class="p">,</span><span class="s">&quot;%&quot;</span><span class="p">,</span><span class="s">&quot;)&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+pie3D<span class="p">(</span>freq.class<span class="p">,</span>labels<span class="o">=</span>lbs<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>freq.class<span class="p">)),</span>explode<span class="o">=</span><span class="m">0.1</span><span class="p">,</span>radius<span class="o">=</span><span class="m">2</span><span class="p">);</span>
+
+<span class="c1"># 4.0  Histogram of relative frequency (the sum of the rectangles heights must be 1)</span>
+opar <span class="o">&lt;-</span> par<span class="p">();</span>          <span class="c1">## make a copy of current settings</span>
+par<span class="p">(</span>cex.axis<span class="o">=</span><span class="m">0.7</span><span class="p">)</span>       <span class="c1">## see Text and Symbol Size at following link: http://www.statmethods.net/advgraphs/parameters.html</span>
+hist<span class="p">(</span>marks<span class="p">,</span>freq<span class="o">=</span><span class="bp">F</span><span class="p">,</span>breaks<span class="o">=</span><span class="m">11</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkblue&quot;</span><span class="p">,</span>axes<span class="o">=</span><span class="bp">F</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;Relative Frequency&quot;</span><span class="p">);</span>       <span class="c1">## 11 break points</span>
+den <span class="o">&lt;-</span> <span class="kp">unique</span><span class="p">(</span>hist<span class="p">(</span>marks<span class="p">,</span>breaks<span class="o">=</span><span class="m">11</span><span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>density<span class="p">);</span>    <span class="c1">## save relative frequency </span>
+brk <span class="o">&lt;-</span> hist<span class="p">(</span>marks<span class="p">,</span>breaks<span class="o">=</span><span class="m">11</span><span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>breaks<span class="p">;</span>             <span class="c1">## save breaks</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>at<span class="o">=</span> brk<span class="p">,</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>                                  <span class="c1">## add x-axis to the plot (1=bottom)</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span>at<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="kp">round</span><span class="p">(</span>den<span class="p">,</span><span class="m">4</span><span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>                    <span class="c1">## add y-axis to the plot (2=left)</span>
+abline<span class="p">(</span>h<span class="o">=</span>den<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>                             <span class="c1">## add line to the plot</span>
+<span class="c1">#par(opar);                                             ## restore original settings </span>
+
+<span class="c1"># 4.1 Histogram (the bases of the rectangles are equal to the following intervals of marks: (18,24](24,25](25,29](29,30]</span>
+int.marks <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">18</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">29</span><span class="p">,</span><span class="m">30</span><span class="p">);</span>
+hist<span class="p">(</span>marks<span class="p">,</span>freq<span class="o">=</span><span class="bp">F</span><span class="p">,</span>breaks<span class="o">=</span>int.marks<span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkblue&quot;</span><span class="p">,</span>axes<span class="o">=</span><span class="bp">F</span><span class="p">);</span>  <span class="c1">## here on y-axis there is the density (hi = fi/Di where fi is rel.freq and Di is &quot;bin width&quot;)</span>
+den <span class="o">&lt;-</span> <span class="kp">unique</span><span class="p">(</span>hist<span class="p">(</span>marks<span class="p">,</span>breaks<span class="o">=</span>int.marks<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>density<span class="p">);</span>     <span class="c1">## save density </span>
+brk <span class="o">&lt;-</span> hist<span class="p">(</span>marks<span class="p">,</span>breaks<span class="o">=</span>int.marks<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>breaks<span class="p">;</span>              <span class="c1">## save breaks</span>
+axis<span class="p">(</span><span class="m">1</span><span class="p">,</span>at<span class="o">=</span> brk<span class="p">,</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>                                          <span class="c1">## add x-axis to the plot (1=bottom)</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span>at<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="kp">round</span><span class="p">(</span>den<span class="p">,</span><span class="m">4</span><span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">);</span>                            <span class="c1">## add y-axis to the plot (2=left)</span>
+abline<span class="p">(</span>h<span class="o">=</span>den<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>                                     <span class="c1">## add line to the plot</span>
+<span class="c1">#par(opar);                                                     ## restore original settings (neglecting the warnings)</span>
+
+<span class="c1">#5.0 Empirical Cumulative Distribution Function of all marks</span>
+plot.ecdf<span class="p">(</span>marks<span class="p">,</span>main<span class="o">=</span><span class="s">&quot;Empirical Cumulative Distribution Function&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;cumulative relative frequency&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;marks&quot;</span><span class="p">);</span>
+<span class="c1">##other ways to do cdf:     </span>
+<span class="c1">##              0. plot(ecdf(marks)); </span>
+<span class="c1">##              1. plot.stepfun(marks,xlab=&quot;marks&quot;);</span>
+<span class="c1">##              2. cum.rel &lt;- cumsum(rel.freq); plot(as.integer(names(cum.rel)),cum.rel,type=&quot;s&quot;,xlab=&quot;&quot;,ylab=&quot;&quot;); points(as.integer(names(cum.rel)),cum.rel);</span>
+<span class="c1">##              note: in plot need to specify value on x-axis</span>
+<span class="c1"># 5.1 ecdf for the following intervals of marks: (18,24](24,25](25,29](29,30]</span>
+int.marks <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">18</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">29</span><span class="p">,</span><span class="m">30</span><span class="p">);</span>
+class.marks <span class="o">&lt;-</span> <span class="kp">cut</span><span class="p">(</span>marks<span class="p">,</span>int.marks<span class="p">);</span>
+freq.class <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>class.marks<span class="p">);</span>
+cum.class.marks <span class="o">&lt;-</span> <span class="kp">cumsum</span><span class="p">(</span>freq.class<span class="p">);</span>
+cum.rel.class.marks <span class="o">&lt;-</span> cum.class.marks<span class="o">/</span><span class="kp">length</span><span class="p">(</span>marks<span class="p">);</span>
+plot<span class="p">(</span>int.marks<span class="p">,</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span>cum.rel.class.marks<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;marks&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;cumulative relative frequency&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;empirical cumulative function of marks&#39; intervals&quot;</span><span class="p">);</span>
+
+<span class="c1">#6. marks mode </span>
+<span class="c1">#x: numeric vector containing the values for which mode is to be computed</span>
+mode.fun <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">){</span>
+abs.freq <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>x<span class="p">);</span>       
+mod <span class="o">&lt;-</span> abs.freq<span class="p">[</span><span class="kp">max</span><span class="p">(</span>abs.freq<span class="p">)];</span>
+<span class="kp">names</span><span class="p">(</span>mod<span class="p">);</span>
+<span class="p">}</span>
+mode.fun<span class="p">(</span>marks<span class="p">);</span>
+
+<span class="c1">#7 mean and standard deviation of marks</span>
+<span class="kp">mean</span><span class="p">(</span>marks<span class="p">);</span>
+sd<span class="p">(</span>marks<span class="p">)</span>   <span class="c1">##sqrt(var(marks))</span>
+
+<span class="c1">#8 median 1st and 3rd quartile</span>
+median<span class="p">(</span>marks<span class="p">);</span>
+quantile<span class="p">(</span>marks<span class="p">)[</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">4</span><span class="p">)];</span>
+
+<span class="c1">#9 10th,20th,90th,99th quantile</span>
+quantile<span class="p">(</span>marks<span class="p">,</span>probs<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="m">99</span><span class="p">)</span><span class="o">/</span><span class="m">100</span><span class="p">);</span>
+
+<span class="c1">#10.0 Marks Box Plot</span>
+boxplot<span class="p">(</span>marks<span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkgreen&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;Marks Box Plot&quot;</span><span class="p">,</span>yaxt <span class="o">=</span> <span class="s">&quot;n&quot;</span><span class="p">,</span>range<span class="o">=</span><span class="m">1.5</span><span class="p">);</span>  <span class="c1">## try setting range=0.5(default range=1.5)...what happens?(see below)</span>
+stats <span class="o">&lt;-</span> <span class="kp">as.vector</span><span class="p">(</span>boxplot<span class="p">(</span>marks<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>stats<span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span>stats<span class="p">,</span>las<span class="o">=</span><span class="m">2</span><span class="p">);</span>
+abline<span class="p">(</span>h<span class="o">=</span>stats<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>
+<span class="c1">#10.1 Marks Box Plot (changing option range) </span>
+boxplot<span class="p">(</span>marks<span class="p">,</span>col<span class="o">=</span><span class="s">&quot;darkgreen&quot;</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;Marks Box Plot&quot;</span><span class="p">,</span>yaxt <span class="o">=</span> <span class="s">&quot;n&quot;</span><span class="p">,</span>range<span class="o">=</span><span class="m">0.5</span><span class="p">);</span>  <span class="c1">##upper whisker end= QR3+0.5*IQR; lower whisker end=QR1-0.5*IQR </span>
+stats <span class="o">&lt;-</span> <span class="kp">as.vector</span><span class="p">(</span>boxplot<span class="p">(</span>marks<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">,</span>range<span class="o">=</span><span class="m">0.5</span><span class="p">)</span><span class="o">$</span>stats<span class="p">);</span>
+axis<span class="p">(</span><span class="m">2</span><span class="p">,</span>stats<span class="p">,</span>las<span class="o">=</span><span class="m">2</span><span class="p">);</span>
+abline<span class="p">(</span>h<span class="o">=</span>stats<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>
+out <span class="o">&lt;-</span> <span class="kp">unique</span><span class="p">(</span>boxplot<span class="p">(</span>marks<span class="p">,</span>range<span class="o">=</span><span class="m">0.5</span><span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>out<span class="p">);</span>
+n <span class="o">&lt;-</span> <span class="kp">length</span><span class="p">(</span>out<span class="p">);</span> 
+identify<span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span>n<span class="p">),</span>out<span class="p">,</span>labels<span class="o">=</span>out<span class="p">);</span> 
+<span class="c1">##identify: 0.reads the position of the graphics pointer when the mouse button is pressed;</span>
+<span class="c1">##          1.searches the coordinates closest to the pointer</span>
+<span class="c1">##          2.print the coordinates&#39; names </span>
+
+<span class="c1">#10.2 summarize marks...</span>
+<span class="kp">summary</span><span class="p">(</span>marks<span class="p">)</span>
+
+<span class="c1">#11 qqnormal plot</span>
+qqnorm<span class="p">(</span>marks<span class="p">);</span>
+qqline<span class="p">(</span>marks<span class="p">);</span>
+</pre></div>
+
+</body>
+</html>
