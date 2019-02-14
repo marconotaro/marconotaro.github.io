@@ -20,10 +20,13 @@
 	<meta name="keywords" content="openstreetmap, visited places, world">
 	<link rel="shortcut icon" href="img/wolf.gif">
 	<link rel="stylesheet" type="text/css" href="css/css.css"> 
-	<link rel="stylesheet" type="text/css" href="css/leaflet.css"> 
-	<link rel="stylesheet" type="text/css" href="css/control.full.screen.css"> 
-	<script src="js/leaflet.js"></script>
-	<script src="js/control.full.screen.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="css/control.full.screen.css">
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+  	<script type="text/javascript" src="js/control.full.screen.js"></script>
 </head>
 
 <body>
@@ -48,64 +51,17 @@
 
 		<div class="bodycontainer">
 			<p>
-				The interactive map below, made by using <a href="https://www.openstreetmap.org" target="_blank">OpeenStreetMap</a> and <a href="https://leafletjs.com/" target="_blank"> Leaflet library</a>, shows the places around the world that I visited thanks to my job or during holiday's journeys alongside my girl. Click on the marker to display the info window.
+				The interactive map below (made by using <a href="https://www.openstreetmap.org" target="_blank">OpeenStreetMap</a> and 
+				<a href="https://leafletjs.com/" target="_blank"> Leaflet library</a>) shows the places that I visited around the world.
+				To cluster the markers I used the <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank"> markercluster</a> plugin. 
+				<!-- Clicking on a bubble the area will blow up and clicking on a marker the info window will display. -->
+				Click on the bubble to blow the area up. Click on the marker to display the info window.
 			</p>
 			<div id="map"></div>
+			<!-- Json file where city are stored -->
+			<script type='text/javascript' src="js/visitedplaces.json"></script> 
+			<!-- Leaflet JavaScript -->
 			<script>
-				// Markers: popup text -- coordinates Lat&Lng
-				var locations=[
-					["<h4>Heidelberg	</h4>",	49.4093582,	8.694724],
-					["<h4>Worms	</h4>",	49.6352685,	8.3603088],
-					["<h4>Spira	</h4>",	49.3165553,	8.433615],
-					["<h4>Bad-Wimpfen	</h4>",	49.2302875,	9.1621599],
-					["<h4>Baden-Baden	</h4>",	48.7580777,	8.2415239],
-					["<h4>Berlin	</h4>",	52.5170365,	13.3888599],
-					["<h4>Potsdam	</h4>",	52.4009309,	13.0591397],
-					["<h4>Trier	</h4>",	49.7596208,	6.6441878],
-					["<h4>Paris	</h4>",	48.8566101,	2.3514992],
-					["<h4>Mont Saint Michel	</h4>",	48.6358559,	-1.5126096],
-					["<h4>Strasbourg	</h4>",	48.584614,	7.7507127],
-					["<h4>Milan	</h4>",	45.4667971,	9.1904984],
-					["<h4>Arco	</h4>",	45.9180319,	10.8860765],
-					["<h4>Bergamo	</h4>",	45.6944947,	9.6698727],
-					["<h4>Verona	</h4>",	45.4384958,	10.9924122],
-					["<h4>Siena (Italy)	</h4>",	43.3185536,	11.3316533],
-					["<h4>Trento	</h4>",	46.0664228,	11.1257601],
-					["<h4>Florence	</h4>",	43.7698712,	11.2555757],
-					["<h4>Turin	</h4>",	45.0677551,	7.6824892],
-					["<h4>Como	</h4>",	45.81082,	9.086044],
-					["<h4>Roma	</h4>",	41.894802,	12.4853384],
-					["<h4>Venice	</h4>",	45.4371908,	12.3345898],
-					["<h4>Pavia	</h4>",	45.1860043,	9.1546375],
-					["<h4>Sirmione	</h4>",	45.4688494,	10.6078237],
-					["<h4>Cagliari	</h4>",	39.2169525,	9.1128513],
-					["<h4>Costa Rei	</h4>",	39.2560813,	9.575808],
-					["<h4>Villasimius	</h4>",	39.14314,	9.520854],
-					["<h4>Stilo	</h4>",	38.4766124,	16.4672633],
-					["<h4>Catanzaro	</h4>",	38.9076353,	16.5960465],
-					["<h4>Soverato	</h4>",	38.69274545,	16.5301697196442],
-					["<h4>Lecco	</h4>",	45.8553764,	9.389605],
-					["<h4>Genova	</h4>",	44.40726,	8.9338624],
-					["<h4>Dublin	</h4>",	53.3497645,	-6.2602732],
-					["<h4>Cliffs of Moher	</h4>",	52.9717877,	-9.4291244],
-					["<h4>Cambridge	</h4>",	52.2034823,	0.1235817],
-					["<h4>Palaiokastritsa	</h4>",	39.6757716,	19.7119035],
-					["<h4>Corfu	</h4>",	39.591337,	19.8596189187339],
-					["<h4>Yaliskari	</h4>",	39.5772842,	19.8259723],
-					["<h4>Sydney	</h4>",	-33.8548157,	151.2164539],
-					["<h4>Canberra	</h4>",	-35.2975906,	149.1012676],
-					["<h4>Wollongong	</h4>",	-34.4243941,	150.89385],
-					["<h4>Blue Mountains National Park	</h4>",	-33.6190685,	150.487633990821],
-					["<h4>Cronulla	</h4>",	-34.0575259,	151.1523851],
-					["<h4>Zurich	</h4>",	47.3769434,	8.5414061],
-					["<h4>Saint Moritz	</h4>",	46.4960592,	9.8386578],
-					["<h4>Granada (Spain)	</h4>",	37.183054,	-3.6021928],
-					["<h4>Cordova	</h4>",	37.8849779,	-4.7760131],
-					["<h4>Sevilla	</h4>",	37.3886303,	-5.9953171],
-					["<h4>Wieliczka	</h4>",	49.9823773,	20.0602114],
-					["<h4>Gran Canaria	</h4>",	27.9580004,	-15.6062305376665],
-				];
-
 				// initialize map
 				// full screen: https://github.com/brunob/leaflet.fullscreen
 				var map = L.map('map',{
@@ -114,7 +70,7 @@
 				fullscreenControl: true,
 				fullscreenControlOptions: {position: 'topright'}
 				}).setView([14, 14], 2);
-				
+
 				// set map tiles source
 				mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 				boxLink = '<a href="https://www.mapbox.com/">Mapbox</a>';			
@@ -124,25 +80,35 @@
 					id: 'mapbox.streets',
 					accessToken: 'pk.eyJ1IjoibW41MTUiLCJhIjoiY2pteDVwNGZtMnF2eTNrcG4xcWp6M2FoeSJ9.IHSYNXCOHQJTSy0eGVEtZw'
 				}).addTo(map); 
-			
-				// custom marker
-				// options description: https://leafletjs.com/reference-1.3.4.html#icon
-				var mymarker = L.icon({
-					iconUrl: 'img/marker-red.png', 
-					iconRetinaUrl: "img/marker-2x-red.png", 
-					iconSize: [25,41],
-					iconAnchor: [12,41],
-					popupAnchor: [1,-34],
-					tooltipAnchor: [16,-28]
-				});
 
-				// add markers to the map
-				for (var i = 0; i < locations.length; i++) {
-					marker = new L.marker([locations[i][1],locations[i][2]], {icon: mymarker})
-					.bindPopup(locations[i][0])
-					.addTo(map);
+				// custom icon
+				// options doc: https://leafletjs.com/reference-1.3.4.html#icon
+				// markers link: https://github.com/pointhi/leaflet-color-markers
+				var CustomIcon = L.icon({
+					iconUrl: 'img/marker-icon-violet.png', 
+					iconRetinaUrl: "img/marker-icon-2x-violet.png", 
+					iconSize: [15,25], // resize original icon of 60%
+					iconAnchor: [7,24],
+					popupAnchor: [1,-15]
+				});
+				
+				// add a marker for each city 
+				// for (var i = 0; i < places.length; i++) {
+				// 	marker = new L.marker([places[i].lat, places[i].lon], {icon: CustomIcon})
+				// 	.bindPopup(places[i][0])
+				// 	.addTo(map);
+				// }
+
+				// clusterize marker on the map
+				var markerClusters = L.markerClusterGroup();
+				for(var i=0; i<places.length; i++){			
+					var popup = places[i].city;
+					var marker = L.marker([places[i].lat, places[i].lon], {icon: CustomIcon}).bindPopup(popup);
+					markerClusters.addLayer(marker);
 				}
+				map.addLayer(markerClusters);
 			</script>
+			
 		</div> <!-- end bodycontainer --> 
 		<div id="footer"></div>
 	</div>
