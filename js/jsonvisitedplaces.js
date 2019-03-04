@@ -206,8 +206,8 @@ var places=[
   },
   {
     "city": "Bellano",
-    "lat": 46.0433967,
-    "lon": 9.3060387
+    "lat": 46.0429573,
+    "lon": 9.3040324
   },
   {
     "city": "Menaggio",
@@ -238,6 +238,21 @@ var places=[
     "city": "Capo di Lago",
     "lat": 45.881563,
     "lon": 10.1630518
+  },
+  {
+    "city": "Finale Ligure",
+    "lat": 44.1689049,
+    "lon": 8.3436524
+  },
+  {
+    "city": "Spotorno",
+    "lat": 44.2264143,
+    "lon": 8.4186797
+  },
+  {
+    "city": "Varigotti",
+    "lat": 44.1824374,
+    "lon": 8.3953613
   },
   {
     "city": "Dublin",
@@ -316,8 +331,8 @@ var places=[
   },
   {
     "city": "Cordova",
-    "lat": 37.8849779,
-    "lon": -4.7760131
+    "lat": 37.8845813,
+    "lon": -4.7760138
   },
   {
     "city": "Sevilla",
