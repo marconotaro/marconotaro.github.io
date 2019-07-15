@@ -10,16 +10,6 @@ var places=[
     "lon": 8.3603088
   },
   {
-    "city": "Spira",
-    "lat": 49.3165553,
-    "lon": 8.433615
-  },
-  {
-    "city": "Bad-Wimpfen",
-    "lat": 49.2302875,
-    "lon": 9.1621599
-  },
-  {
     "city": "Baden-Baden",
     "lat": 48.7580777,
     "lon": 8.2415239
@@ -60,11 +50,6 @@ var places=[
     "lon": 9.1904984
   },
   {
-    "city": "Arco",
-    "lat": 45.9180319,
-    "lon": 10.8860765
-  },
-  {
     "city": "Bergamo",
     "lat": 45.6944947,
     "lon": 9.6698727
@@ -96,11 +81,11 @@ var places=[
   },
   {
     "city": "Como",
-    "lat": 45.81082,
-    "lon": 9.086044
+    "lat": 45.8115623,
+    "lon": 9.0830353
   },
   {
-    "city": "Roma",
+    "city": "Rome",
     "lat": 41.894802,
     "lon": 12.4853384
   },
@@ -110,19 +95,9 @@ var places=[
     "lon": 12.3345898
   },
   {
-    "city": "Monasterolo del Castello",
-    "lat": 45.763185,
-    "lon": 9.931658
-  },
-  {
     "city": "Pavia",
     "lat": 45.1860043,
     "lon": 9.1546375
-  },
-  {
-    "city": "Sirmione",
-    "lat": 45.4688494,
-    "lon": 10.6078237
   },
   {
     "city": "Cagliari",
@@ -135,29 +110,9 @@ var places=[
     "lon": 9.575808
   },
   {
-    "city": "Villasimius",
-    "lat": 39.14314,
-    "lon": 9.520854
-  },
-  {
-    "city": "Stilo",
-    "lat": 38.4766124,
-    "lon": 16.4672633
-  },
-  {
-    "city": "Mammola",
-    "lat": 38.363576,
-    "lon": 16.239403
-  },
-  {
     "city": "Catanzaro",
     "lat": 38.9076353,
     "lon": 16.5960465
-  },
-  {
-    "city": "Soverato",
-    "lat": 38.69274545,
-    "lon": 16.5301697196442
   },
   {
     "city": "Lecco",
@@ -170,89 +125,24 @@ var places=[
     "lon": 8.9338624
   },
   {
-    "city": "Bolzano",
-    "lat": 46.4981125,
-    "lon": 11.3547801
-  },
-  {
-    "city": "Chiavenna",
-    "lat": 46.3199792,
-    "lon": 9.3981218
-  },
-  {
-    "city": "Brunate",
-    "lat": 45.8194702,
-    "lon": 9.0959895
-  },
-  {
-    "city": "Livigno",
-    "lat": 46.5378006,
-    "lon": 10.1363165
-  },
-  {
-    "city": "Garzeno",
-    "lat": 46.1342737,
-    "lon": 9.2483448
-  },
-  {
-    "city": "Bellagio",
-    "lat": 45.9872549,
-    "lon": 9.2613001
-  },
-  {
-    "city": "Varenna",
-    "lat": 46.0099785,
-    "lon": 9.2831593
-  },
-  {
-    "city": "Bellano",
-    "lat": 46.0429573,
-    "lon": 9.3040324
-  },
-  {
-    "city": "Menaggio",
-    "lat": 46.022565,
-    "lon": 9.2414329
-  },
-  {
-    "city": "Monte Isola",
-    "lat": 45.711994,
-    "lon": 10.0822353982026
-  },
-  {
-    "city": "Iseo",
-    "lat": 45.6595554,
-    "lon": 10.0510489
-  },
-  {
-    "city": "Crema",
-    "lat": 45.362828,
-    "lon": 9.6874573
-  },
-  {
     "city": "Mantua",
     "lat": 45.1566683,
     "lon": 10.7917191
   },
   {
-    "city": "Capo di Lago",
-    "lat": 45.881563,
-    "lon": 10.1630518
+    "city": "Naples (Italy)",
+    "lat": 40.8359336,
+    "lon": 14.2487826
   },
   {
-    "city": "Finale Ligure",
-    "lat": 44.1689049,
-    "lon": 8.3436524
+    "city": "Ancona",
+    "lat": 43.6170137,
+    "lon": 13.5170982
   },
   {
-    "city": "Spotorno",
-    "lat": 44.2264143,
-    "lon": 8.4186797
-  },
-  {
-    "city": "Varigotti",
-    "lat": 44.1824374,
-    "lon": 8.3953613
+    "city": "Bologna",
+    "lat": 44.4936714,
+    "lon": 11.3430347
   },
   {
     "city": "Dublin",
@@ -270,24 +160,9 @@ var places=[
     "lon": 0.1235817
   },
   {
-    "city": "Palaiokastritsa",
-    "lat": 39.6757716,
-    "lon": 19.7119035
-  },
-  {
     "city": "Corfu",
     "lat": 39.591337,
     "lon": 19.8596189187339
-  },
-  {
-    "city": "Yaliskari",
-    "lat": 39.5772842,
-    "lon": 19.8259723
-  },
-  {
-    "city": "Sidari (Greece)",
-    "lat": 39.792821,
-    "lon": 19.7017291
   },
   {
     "city": "Sydney",
@@ -316,13 +191,18 @@ var places=[
   },
   {
     "city": "Zurich",
-    "lat": 47.3769434,
-    "lon": 8.5414061
+    "lat": 47.3723941,
+    "lon": 8.5423328
   },
   {
     "city": "Saint Moritz",
     "lat": 46.4960592,
     "lon": 9.8386578
+  },
+  {
+    "city": "Lauterbrunnen",
+    "lat": 46.5939043,
+    "lon": 7.9078016
   },
   {
     "city": "Granada (Spain)",
@@ -340,29 +220,9 @@ var places=[
     "lon": -5.9953403
   },
   {
-    "city": "Agaete",
-    "lat": 28.1008499,
-    "lon": -15.7023479
-  },
-  {
-    "city": "Galdar",
-    "lat": 28.1442408,
-    "lon": -15.6542506
-  },
-  {
-    "city": "Maspalomas",
-    "lat": 27.7527731,
-    "lon": -15.5970832
-  },
-  {
-    "city": "Playa de Mogán",
-    "lat": 27.820932,
-    "lon": -15.7614534
-  },
-  {
-    "city": "Roque Nublo",
-    "lat": 27.9708896,
-    "lon": -15.6125928
+    "city": "Gran Canaria",
+    "lat": 27.9580004,
+    "lon": -15.6062305376665
   },
   {
     "city": "Wieliczka",
