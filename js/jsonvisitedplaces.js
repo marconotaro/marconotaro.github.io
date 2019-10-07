@@ -5,11 +5,6 @@ var places=[
     "lon": 8.694724
   },
   {
-    "city": "Worms",
-    "lat": 49.6352685,
-    "lon": 8.3603088
-  },
-  {
     "city": "Baden-Baden",
     "lat": 48.7580777,
     "lon": 8.2415239
@@ -125,11 +120,6 @@ var places=[
     "lon": 8.9338624
   },
   {
-    "city": "Mantua",
-    "lat": 45.1566683,
-    "lon": 10.7917191
-  },
-  {
     "city": "Naples (Italy)",
     "lat": 40.8359336,
     "lon": 14.2487826
@@ -205,6 +195,11 @@ var places=[
     "lon": 7.9078016
   },
   {
+    "city": "Basel",
+    "lat": 47.5581077,
+    "lon": 7.5878261
+  },
+  {
     "city": "Granada (Spain)",
     "lat": 37.183054,
     "lon": -3.6021928
@@ -223,6 +218,16 @@ var places=[
     "city": "Gran Canaria",
     "lat": 27.9580004,
     "lon": -15.6062305376665
+  },
+  {
+    "city": "Fuerteventura",
+    "lat": 28.40037685,
+    "lon": -14.0048697135422
+  },
+  {
+    "city": "Lanzarote",
+    "lat": 29.03970805,
+    "lon": -13.6362916086041
   },
   {
     "city": "Wieliczka",
