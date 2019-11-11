@@ -41,8 +41,8 @@ var places=[
   },
   {
     "city": "Milan",
-    "lat": 45.4667971,
-    "lon": 9.1904984
+    "lat": 45.4668,
+    "lon": 9.1905
   },
   {
     "city": "Bergamo",
@@ -213,6 +213,11 @@ var places=[
     "city": "Sevilla",
     "lat": 37.3886303,
     "lon": -5.9953403
+  },
+  {
+    "city": "Barcelona",
+    "lat": 41.3828939,
+    "lon": 2.1774322
   },
   {
     "city": "Gran Canaria",
