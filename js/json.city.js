@@ -1,241 +1,221 @@
-var places=[
+var spots=[
   {
-    "city": "Heidelberg",
+    "spot": "Heidelberg",
     "lat": 49.4093582,
     "lon": 8.694724
   },
   {
-    "city": "Baden-Baden",
+    "spot": "Baden-Baden",
     "lat": 48.7580777,
     "lon": 8.2415239
   },
   {
-    "city": "Berlin",
+    "spot": "Berlin",
     "lat": 52.5170365,
     "lon": 13.3888599
   },
   {
-    "city": "Potsdam",
+    "spot": "Potsdam",
     "lat": 52.4009309,
     "lon": 13.0591397
   },
   {
-    "city": "Trier",
+    "spot": "Trier",
     "lat": 49.7596208,
     "lon": 6.6441878
   },
   {
-    "city": "Paris",
-    "lat": 48.8566101,
-    "lon": 2.3514992
+    "spot": "Paris",
+    "lat": 48.8566969,
+    "lon": 2.3514616
   },
   {
-    "city": "Mont Saint Michel",
+    "spot": "Mont Saint Michel",
     "lat": 48.6358559,
     "lon": -1.5126096
   },
   {
-    "city": "Strasbourg",
+    "spot": "Strasbourg",
     "lat": 48.584614,
     "lon": 7.7507127
   },
   {
-    "city": "Milan",
+    "spot": "Milan",
     "lat": 45.4668,
     "lon": 9.1905
   },
   {
-    "city": "Bergamo",
-    "lat": 45.6944947,
-    "lon": 9.6698727
+    "spot": "Bergamo",
+    "lat": 45.7566557,
+    "lon": 9.75421920086225
   },
   {
-    "city": "Verona",
+    "spot": "Verona",
     "lat": 45.4384958,
     "lon": 10.9924122
   },
   {
-    "city": "Siena (Italy)",
-    "lat": 43.3185536,
-    "lon": 11.3316533
+    "spot": "Siena (Italy)",
+    "lat": 43.16711185,
+    "lon": 11.46733174691
   },
   {
-    "city": "Trento",
+    "spot": "Trento",
     "lat": 46.0664228,
     "lon": 11.1257601
   },
   {
-    "city": "Florence",
+    "spot": "Florence",
     "lat": 43.7698712,
     "lon": 11.2555757
   },
   {
-    "city": "Turin",
+    "spot": "Turin",
     "lat": 45.0677551,
     "lon": 7.6824892
   },
   {
-    "city": "Como",
-    "lat": 45.8115623,
-    "lon": 9.0830353
+    "spot": "Como",
+    "lat": 45.9394759,
+    "lon": 9.14941014540895
   },
   {
-    "city": "Rome",
-    "lat": 41.894802,
-    "lon": 12.4853384
+    "spot": "Rome",
+    "lat": 41.8933203,
+    "lon": 12.4829321
   },
   {
-    "city": "Venice",
+    "spot": "Venice",
     "lat": 45.4371908,
     "lon": 12.3345898
   },
   {
-    "city": "Pavia",
-    "lat": 45.1860043,
-    "lon": 9.1546375
+    "spot": "Pavia",
+    "lat": 45.03685465,
+    "lon": 9.13782508282603
   },
   {
-    "city": "Cagliari",
+    "spot": "Cagliari",
     "lat": 39.2169525,
     "lon": 9.1128513
   },
   {
-    "city": "Costa Rei",
-    "lat": 39.2560813,
-    "lon": 9.575808
+    "spot": "Catanzaro",
+    "lat": 38.82996035,
+    "lon": 16.4315568762783
   },
   {
-    "city": "Catanzaro",
-    "lat": 38.9076353,
-    "lon": 16.5960465
+    "spot": "Lecco",
+    "lat": 45.9005485,
+    "lon": 9.41202482143963
   },
   {
-    "city": "Lecco",
-    "lat": 45.8553764,
-    "lon": 9.389605
-  },
-  {
-    "city": "Genoa",
+    "spot": "Genoa",
     "lat": 44.40726,
     "lon": 8.9338624
   },
   {
-    "city": "Naples (Italy)",
+    "spot": "Naples (Italy)",
     "lat": 40.8359336,
     "lon": 14.2487826
   },
   {
-    "city": "Ancona",
-    "lat": 43.6170137,
-    "lon": 13.5170982
+    "spot": "Ancona",
+    "lat": 43.4801204,
+    "lon": 13.2187906091518
   },
   {
-    "city": "Bologna",
+    "spot": "Bologna",
     "lat": 44.4936714,
     "lon": 11.3430347
   },
   {
-    "city": "Dublin",
+    "spot": "Dublin",
     "lat": 53.3497645,
     "lon": -6.2602732
   },
   {
-    "city": "Cliffs of Moher",
-    "lat": 52.9717877,
-    "lon": -9.4291244
-  },
-  {
-    "city": "Cambridge",
+    "spot": "Cambridge",
     "lat": 52.2034823,
     "lon": 0.1235817
   },
   {
-    "city": "Corfu",
+    "spot": "Corfu",
     "lat": 39.591337,
     "lon": 19.8596189187339
   },
   {
-    "city": "Sydney",
+    "spot": "Sydney",
     "lat": -33.8548157,
     "lon": 151.2164539
   },
   {
-    "city": "Canberra",
+    "spot": "Canberra",
     "lat": -35.2975906,
     "lon": 149.1012676
   },
   {
-    "city": "Wollongong",
+    "spot": "Wollongong",
     "lat": -34.4243941,
     "lon": 150.89385
   },
   {
-    "city": "Blue Mountains National Park",
-    "lat": -33.6190685,
-    "lon": 150.487633990821
-  },
-  {
-    "city": "Cronulla",
+    "spot": "Cronulla",
     "lat": -34.0575259,
     "lon": 151.1523851
   },
   {
-    "city": "Zurich",
+    "spot": "Zurich",
     "lat": 47.3723941,
     "lon": 8.5423328
   },
   {
-    "city": "Saint Moritz",
-    "lat": 46.4960592,
-    "lon": 9.8386578
-  },
-  {
-    "city": "Lauterbrunnen",
-    "lat": 46.5939043,
-    "lon": 7.9078016
-  },
-  {
-    "city": "Basel",
+    "spot": "Basel",
     "lat": 47.5581077,
     "lon": 7.5878261
   },
   {
-    "city": "Granada (Spain)",
+    "spot": "Saint Moritz",
+    "lat": 46.4960592,
+    "lon": 9.8386578
+  },
+  {
+    "spot": "Granada (Andalusia)",
     "lat": 37.183054,
     "lon": -3.6021928
   },
   {
-    "city": "Cordova",
+    "spot": "Cordova",
     "lat": 37.8845813,
     "lon": -4.7760138
   },
   {
-    "city": "Sevilla",
+    "spot": "Sevilla",
     "lat": 37.3886303,
     "lon": -5.9953403
   },
   {
-    "city": "Barcelona",
+    "spot": "Barcelona",
     "lat": 41.3828939,
     "lon": 2.1774322
   },
   {
-    "city": "Gran Canaria",
+    "spot": "Gran Canaria",
     "lat": 27.9580004,
     "lon": -15.6062305376665
   },
   {
-    "city": "Fuerteventura",
+    "spot": "Fuerteventura",
     "lat": 28.40037685,
     "lon": -14.0048697135422
   },
   {
-    "city": "Lanzarote",
+    "spot": "Lanzarote",
     "lat": 29.03970805,
     "lon": -13.6362916086041
   },
   {
-    "city": "Wieliczka",
+    "spot": "Wieliczka",
     "lat": 49.9823773,
     "lon": 20.0602114
   }
