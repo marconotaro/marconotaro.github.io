@@ -39,6 +39,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}@2x?a
     accessToken: 'pk.eyJ1IjoibW41MTUiLCJhIjoiY2pteDVwNGZtMnF2eTNrcG4xcWp6M2FoeSJ9.IHSYNXCOHQJTSy0eGVEtZw'
 }).addTo(map); 
 
+// Leaflet Control Geocoder with box
+L.Control.geocoder().addTo(map);
+
 /*
   custom icon
   options doc: https://leafletjs.com/reference-1.3.4.html#icon
