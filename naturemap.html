@@ -17,14 +17,16 @@
 	<meta name="author" content="Marco Notaro">
 	<meta name="description" content="Marco Notaro WebSite">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to make the site responsive -->
-	<meta name="keywords" content="openstreetmap, mapbox, visited places, world">
+	<meta name="keywords" content="openstreetmap, mapbox, natural places, world">
 	<link rel="shortcut icon" href="img/wolf.gif">
-	<link rel="stylesheet" type="text/css" href="css/css.css"> 
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@latest/dist/Control.Geocoder.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     <link rel="stylesheet" type="text/css" href="css/control.full.screen.css">
-    <script type="text/javascript" src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet-src.js"></script>
+	<script src="https://unpkg.com/leaflet-control-geocoder@latest/dist/Control.Geocoder.js"></script>
     <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
   	<script type="text/javascript" src="js/control.full.screen.js"></script>
 </head>
@@ -51,18 +53,17 @@
 
 		<div class="bodycontainer">
 			<p>
-				The interactive map below (made by using <a href="https://www.openstreetmap.org" target="_blank">OpeenStreetMap</a>,
-				<a href="https://www.mapbox.com/" target="_blank">MapBox</a> and <a href="https://leafletjs.com/" target="_blank"> Leaflet library</a>)
-				shows the main cities that I visited around the world.
-				Instead, in this <a href="naturemap.html"> page</a> you can find the most awesome and uncontaminated natural places that I visited around the world.
+				The interactive map below (made by using <a href="https://www.openstreetmap.org" target="_blank">OpeenStreetMap</a>, 
+				<a href="https://www.mapbox.com/" target="_blank">MapBox</a> and <a href="https://leafletjs.com/" target="_blank"> Leaflet library</a>) 
+				shows the most awesome and uncontaminated natural places (mostly alpine) that I visited.
 				To cluster the markers I used the <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank"> markercluster</a> plugin. 
 				Click on the bubble to blow the area up. Click on the marker to display the info window.
 			</p>
 			<div id="map"></div>
 			<!-- trick: json2js for a proper visualization -->
-			<script type="text/javascript" src="js/json.city.js"></script>
+			<script type="text/javascript" src="js/json.nature.js"></script> 
 			<!-- Leaflet JavaScript -->
-			<script type="text/javascript" src="js/leaflet.city.js"></script>
+			<script type="text/javascript" src="js/leaflet.nature.js"></script>
 			
 		</div> <!-- end bodycontainer --> 
 		<div id="footer"></div>
