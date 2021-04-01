@@ -11,14 +11,14 @@ body{
 
 div#container{
 	text-align: justify;
-	max-width: 70%; 
+	max-width: 70%;
 	height: auto;
 	margin: auto;
 }
 
 div#header{
 	position: relative;
-	height: 4.5em; 
+	height: 4.5em;
 }
 
 div#navigation li{
@@ -28,7 +28,7 @@ div#navigation li{
 
 div#navigationbar{
 	background-image: none;
-	background-color: #EAEAEA; 
+	background-color: #EAEAEA;
 	margin-top: 0.55em;
 	margin-right: 0.7em;
 	margin-left: 0.7em;
@@ -39,7 +39,7 @@ div#navigationbar{
 	padding-top: 0.22em;
 	padding-right: 0.44em;
 	padding-bottom: 0.22em;
-	padding-left: 0.3em; 
+	padding-left: 0.3em;
 	font-size: 13.5px;
 }
 
@@ -60,7 +60,7 @@ div#footer{
 div.bodycontainer{
 	padding: 0.7em 1.5em;
 	margin-right: 0.7em;
-	margin-left: 0.7em; 
+	margin-left: 0.7em;
 	border-left: 1px solid #000;
 	border-right: 1px solid #000;
 	background-image: none;
@@ -77,14 +77,14 @@ div.bodycontainer::after {
 div.bodycontainer p{
 	text-align: justify;
 	line-height: 1.4em;
-	margin-top: 0.4em;	
+	margin-top: 0.4em;
 	font-size: 13.5px;
 }
 
 div.bodycontainer img.fleximg{
 	position: relative;
 	border: none;
-	float: right;	
+	float: right;
 	margin-top: 0.3em;
 	margin-bottom: 0.3em;
 	margin-left: 1.3em;
@@ -105,7 +105,7 @@ div.bodycontainer h3{
 		display: table;
 		width: 100%;
 		padding-top: 0.3em;
-		padding-bottom: 0.7em;	
+		padding-bottom: 0.7em;
 	}
 }
 
@@ -125,7 +125,7 @@ div#map{
 	background-color: #808080;
 	margin-bottom: 0.5em;
 }
- 
+
 a{
 	color: #000;
 	text-decoration:underline;
@@ -156,7 +156,7 @@ a.menubar:hover{
 ul.menubar{
 	font-size: 13.5px;
 	margin-bottom: 0.1em;
-	margin-left: -2.5em; 
+	margin-left: -2.5em;
 	margin-top: 0em;
 	margin-right: 0em;
 }
@@ -184,7 +184,7 @@ li.elsewhere{
 
 ol.teaching{
 	line-height: 1.4em;
-	margin-left: -1em;	
+	margin-left: -1em;
 }
 
 ol.research{
@@ -217,7 +217,7 @@ li.research{
 }
 
 li.teaching{
-	margin-top: 0.25em; 
+	margin-top: 0.25em;
 	margin-bottom: 0.25em;
 	margin-left: -1.3em;
 }

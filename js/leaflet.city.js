@@ -37,7 +37,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}@2x?a
     maxZoom: 20,
     id: 'streets-v11',
     accessToken: 'pk.eyJ1IjoibW41MTUiLCJhIjoiY2pteDVwNGZtMnF2eTNrcG4xcWp6M2FoeSJ9.IHSYNXCOHQJTSy0eGVEtZw'
-}).addTo(map); 
+}).addTo(map);
 
 // Leaflet Control Geocoder with box
 L.Control.geocoder().addTo(map);

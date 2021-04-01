@@ -120,7 +120,7 @@ col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="kp"
 par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
 p <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.9</span><span class="p">,</span><span class="m">0.1</span><span class="p">)</span>
 col <span class="o">&lt;-</span> rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span>
-<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span> plot<span class="p">(</span>pbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">1000</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>main<span class="o">=</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;bin n=20, p=&quot;</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">],</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> 
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>p<span class="p">))</span> plot<span class="p">(</span>pbinom<span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">1000</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>main<span class="o">=</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;bin n=20, p=&quot;</span><span class="p">,</span>p<span class="p">[</span>i<span class="p">]),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="kp">col</span><span class="p">[</span>i<span class="p">],</span>xlab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># fx(vario n)</span>
 p <span class="o">&lt;-</span> <span class="m">0.2</span>
@@ -243,14 +243,14 @@ points<span class="p">(</span><span class="m">0</span><span class="o">:</span><s
 <span class="c1">###################</span>
 x<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
 lambda <span class="o">&lt;-</span><span class="m">0.6</span>    <span class="c1">#0 &lt; lambda &lt;1: funzione decrescente</span>
-plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span> 
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
 
 lambda<span class="o">&lt;-</span><span class="m">10</span>      <span class="c1">#lambda intero: funzione bimodale</span>
-plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>       
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
 plot<span class="p">(</span>x<span class="p">,</span> ppois <span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
 
 lambda <span class="o">&lt;-</span><span class="m">4.5</span>    <span class="c1">#lambda non intero&gt;1: funzione unimodale</span>
-plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span> 
+plot<span class="p">(</span>x<span class="p">,</span> dpois<span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span> pch<span class="o">=</span><span class="m">20</span><span class="p">)</span>
 plot<span class="p">(</span>x<span class="p">,</span> ppois <span class="p">(</span>x<span class="p">,</span> lambda<span class="p">),</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">)</span>
 
 <span class="c1"># simulazione dell&#39;estrazione di m elementi da una popolazione poissoniana di parametro lambda e confronto delle frequenze </span>
@@ -294,7 +294,7 @@ valori_simulati<span class="o">&lt;-</span> runif<span class="p">(</span>m<span 
 
 <span class="c1"># confronto delle frequenze dei valori simulati con grafico il della legge uniforme</span>
 hist<span class="p">(</span>valori_simulati<span class="p">,</span> freq<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
-curve<span class="p">(</span>dunif<span class="p">(</span>x<span class="p">,</span>a<span class="p">,</span>b<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span>a<span class="p">,</span>b<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>    
+curve<span class="p">(</span>dunif<span class="p">(</span>x<span class="p">,</span>a<span class="p">,</span>b<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span>a<span class="p">,</span>b<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># meglio confrontare le funzioni cumulative, soprattutto trattandosi di variabili casuali continue</span>
 plot<span class="p">(</span>ecdf<span class="p">(</span>valori_simulati<span class="p">))</span>
@@ -321,9 +321,9 @@ rate <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</sp
 m<span class="o">=</span><span class="m">10000</span>     <span class="c1">#poi provare m=10000</span>
 rate<span class="o">=</span><span class="m">0.5</span>
 valori_simulati<span class="o">&lt;-</span> rexp<span class="p">(</span>m<span class="p">,</span>rate<span class="p">)</span>
-hist<span class="p">(</span>valori_simulati<span class="p">,</span> freq<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> breaks<span class="o">=</span><span class="m">30</span><span class="p">)</span> 
+hist<span class="p">(</span>valori_simulati<span class="p">,</span> freq<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> breaks<span class="o">=</span><span class="m">30</span><span class="p">)</span>
 xinf<span class="o">=</span><span class="m">5</span><span class="o">*</span><span class="m">1</span><span class="o">/</span>rate
-curve<span class="p">(</span>dexp<span class="p">(</span>x<span class="p">,</span>rate<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> xinf<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
+curve<span class="p">(</span>dexp<span class="p">(</span>x<span class="p">,</span>rate<span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> xinf<span class="p">),</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># confronto delle funzioni cumulative </span>
 plot<span class="p">(</span>ecdf<span class="p">(</span>valori_simulati<span class="p">))</span>

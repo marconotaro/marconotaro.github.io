@@ -94,14 +94,14 @@ abline<span class="p">(</span>h<span class="o">=</span>abs.freq<span class="p">,
 
 plot<span class="p">(</span>rel.freq<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;h&quot;</span><span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq<span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">5</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;relative frequency bar diagram&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">);</span>
 points<span class="p">(</span><span class="kp">as.integer</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>rel.freq<span class="p">)),</span>rel.freq<span class="p">,</span>pch<span class="o">=</span><span class="m">3</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">);</span>
-abline<span class="p">(</span>h<span class="o">=</span>rel.freq<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>        
+abline<span class="p">(</span>h<span class="o">=</span>rel.freq<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>
 
 barplot<span class="p">(</span>abs.freq<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>abs.freq<span class="p">)),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;absolute frequency barplot&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;absolute frequency&quot;</span><span class="p">);</span>
 bp <span class="o">&lt;-</span> barplot<span class="p">(</span>abs.freq<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">);</span>     <span class="c1">#variable &quot;bp&quot; is a matrix giving the coordinates of all the bar midpoints drawn on the x-axis</span>
 text<span class="p">(</span>y<span class="o">=</span>abs.freq<span class="m">+0.2</span><span class="p">,</span> x<span class="o">=</span>bp<span class="p">,</span> labels<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span>abs.freq<span class="p">),</span>xpd<span class="o">=</span><span class="bp">T</span><span class="p">);</span>    <span class="c1">## add labels to barplot </span>
 
 barplot<span class="p">(</span>rel.freq<span class="p">,</span>col<span class="o">=</span>rainbow<span class="p">(</span><span class="kp">length</span><span class="p">(</span>rel.freq<span class="p">)),</span>ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.2</span><span class="p">),</span>las<span class="o">=</span><span class="m">1</span><span class="p">,</span>main<span class="o">=</span><span class="s">&quot;relative frequency barplot&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;relative frequency&quot;</span><span class="p">);</span>
-bp <span class="o">&lt;-</span> barplot<span class="p">(</span>rel.freq<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">);</span>     
+bp <span class="o">&lt;-</span> barplot<span class="p">(</span>rel.freq<span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">);</span>
 text<span class="p">(</span>y<span class="o">=</span>rel.freq<span class="m">+0.005</span><span class="p">,</span> x<span class="o">=</span>bp<span class="p">,</span> labels<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>rel.freq<span class="p">,</span><span class="m">3</span><span class="p">)),</span>xpd<span class="o">=</span><span class="bp">T</span><span class="p">,</span>cex<span class="o">=</span><span class="m">0.7</span><span class="p">);</span>
 <span class="c1">#dev.off();</span>
 
@@ -162,7 +162,7 @@ plot<span class="p">(</span>int.marks<span class="p">,</span><span class="kt">c<
 <span class="c1">#6. marks mode </span>
 <span class="c1">#x: numeric vector containing the values for which mode is to be computed</span>
 mode.fun <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">){</span>
-abs.freq <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>x<span class="p">);</span>       
+abs.freq <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>x<span class="p">);</span>
 mod <span class="o">&lt;-</span> abs.freq<span class="p">[</span><span class="kp">max</span><span class="p">(</span>abs.freq<span class="p">)];</span>
 <span class="kp">names</span><span class="p">(</span>mod<span class="p">);</span>
 <span class="p">}</span>
@@ -190,8 +190,8 @@ stats <span class="o">&lt;-</span> <span class="kp">as.vector</span><span class=
 axis<span class="p">(</span><span class="m">2</span><span class="p">,</span>stats<span class="p">,</span>las<span class="o">=</span><span class="m">2</span><span class="p">);</span>
 abline<span class="p">(</span>h<span class="o">=</span>stats<span class="p">,</span>lty<span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">);</span>
 out <span class="o">&lt;-</span> <span class="kp">unique</span><span class="p">(</span>boxplot<span class="p">(</span>marks<span class="p">,</span>range<span class="o">=</span><span class="m">0.5</span><span class="p">,</span>plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>out<span class="p">);</span>
-n <span class="o">&lt;-</span> <span class="kp">length</span><span class="p">(</span>out<span class="p">);</span> 
-identify<span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span>n<span class="p">),</span>out<span class="p">,</span>labels<span class="o">=</span>out<span class="p">);</span> 
+n <span class="o">&lt;-</span> <span class="kp">length</span><span class="p">(</span>out<span class="p">);</span>
+identify<span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span>n<span class="p">),</span>out<span class="p">,</span>labels<span class="o">=</span>out<span class="p">);</span>
 <span class="c1">##identify: 0.reads the position of the graphics pointer when the mouse button is pressed;</span>
 <span class="c1">##          1.searches the coordinates closest to the pointer</span>
 <span class="c1">##          2.print the coordinates&#39; names </span>
