@@ -78,7 +78,7 @@
 <span class="c1">###################################</span>
 
 <span class="c1">## caricare dati e calcolo frequenze relative ed assolute</span>
-dati <span class="o">&lt;-</span> read.delim<span class="p">(</span><span class="s">&quot;http://homes.di.unimi.it/~zanaboni/DIDATTICA_CORRENTE/VOTItrecolonne.txt&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;;&quot;</span><span class="p">)</span> 
+dati <span class="o">&lt;-</span> read.delim<span class="p">(</span><span class="s">&quot;http://homes.di.unimi.it/~zanaboni/DIDATTICA_CORRENTE/VOTItrecolonne.txt&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;;&quot;</span><span class="p">)</span>
 scritto <span class="o">&lt;-</span> dati<span class="p">[,</span><span class="m">1</span><span class="p">]</span>
 orale <span class="o">&lt;-</span> dati<span class="p">[,</span><span class="m">2</span><span class="p">][</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>dati<span class="p">[,</span><span class="m">2</span><span class="p">])]</span>
 abs.sc <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>scritto<span class="p">)</span>
@@ -113,16 +113,16 @@ points<span class="p">(</span><span class="kp">sort</span><span class="p">(</spa
 plot<span class="p">(</span><span class="kp">sort</span><span class="p">(</span><span class="kp">unique</span><span class="p">(</span>orale<span class="p">)),</span>cumsumorale<span class="p">,</span>type<span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;voti&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;freq.rel&quot;</span><span class="p">)</span>
 points<span class="p">(</span><span class="kp">sort</span><span class="p">(</span><span class="kp">unique</span><span class="p">(</span>orale<span class="p">)),</span>cumsumorale<span class="p">,</span>pch<span class="o">=</span><span class="m">4</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">,</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">)</span>
 
-plot.stepfun<span class="p">(</span>scritto<span class="p">,</span>main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>col.points<span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">4</span><span class="p">)</span> 
+plot.stepfun<span class="p">(</span>scritto<span class="p">,</span>main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>col.points<span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">4</span><span class="p">)</span>
 par<span class="p">(</span>new<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-plot.stepfun<span class="p">(</span>orale<span class="p">,</span>main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span>col.points<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">3</span><span class="p">)</span> 
+plot.stepfun<span class="p">(</span>orale<span class="p">,</span>main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>col<span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span>col.points<span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">,</span>pch<span class="o">=</span><span class="m">3</span><span class="p">)</span>
 
 <span class="c1"># hist</span>
 hist<span class="p">(</span>scritto<span class="p">)</span>
 int <span class="o">&lt;-</span> hist<span class="p">(</span>scritto<span class="p">,</span> plot<span class="o">=</span><span class="bp">F</span><span class="p">)</span><span class="o">$</span>breaks
 classi <span class="o">&lt;-</span> <span class="kp">cut</span><span class="p">(</span>scritto<span class="p">,</span>int<span class="p">,</span>include.lowest<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
 freq.as <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>classi<span class="p">)</span>
-freq.rel <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>classi<span class="p">)</span><span class="o">/</span><span class="kp">length</span><span class="p">(</span>scritto<span class="p">)</span> 
+freq.rel <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>classi<span class="p">)</span><span class="o">/</span><span class="kp">length</span><span class="p">(</span>scritto<span class="p">)</span>
 dens <span class="o">&lt;-</span> freq.rel<span class="o">/</span><span class="m">2</span>  <span class="c1"># 2: ampiezza della classe</span>
 
 <span class="c1">#pdf(file=&quot;C:/Users/Marco/Desktop/Analisi_dei_Dati/Plot.pdf&quot;)</span>
