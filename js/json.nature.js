@@ -13,8 +13,8 @@ var spots=[
   },
   {
     "spot": "Rifugio Laghi Gemelli",
-    "lat": 45.99301195,
-    "lon": 9.80363177,
+    "lat": 45.9929728,
+    "lon": 9.80353803,
     "ele": "1,968"
   },
   {
@@ -67,8 +67,8 @@ var spots=[
   },
   {
     "spot": "Rifugio Resegone",
-    "lat": 45.8560235,
-    "lon": 9.48908777,
+    "lat": 45.8560289,
+    "lon": 9.4890884,
     "ele": "1,265"
   },
   {
@@ -144,6 +144,24 @@ var spots=[
     "ele": null
   },
   {
+    "spot": "CastelSardo",
+    "lat": 40.910466,
+    "lon": 8.718313,
+    "ele": null
+  },
+  {
+    "spot": "Asinara Sardegna",
+    "lat": 41.0523109,
+    "lon": 8.25609173,
+    "ele": null
+  },
+  {
+    "spot": "La Maddalena",
+    "lat": 41.2127826,
+    "lon": 9.4066598,
+    "ele": null
+  },
+  {
     "spot": "Lauterbrunnen",
     "lat": 46.5939043,
     "lon": 7.9078016,
@@ -151,8 +169,8 @@ var spots=[
   },
   {
     "spot": "Schilthorn",
-    "lat": 46.5573271,
-    "lon": 7.8352093,
+    "lat": 46.5572822,
+    "lon": 7.8351745,
     "ele": "2,973"
   },
   {
@@ -163,8 +181,8 @@ var spots=[
   },
   {
     "spot": "Grosser Aletschgletscher",
-    "lat": 46.45006345,
-    "lon": 8.07747558,
+    "lat": 46.45096305,
+    "lon": 8.07777816,
     "ele": null
   },
   {
@@ -250,6 +268,30 @@ var spots=[
     "lat": 46.4984413,
     "lon": 7.72648598,
     "ele": "1,578"
+  },
+  {
+    "spot": "Chrüzhütte",
+    "lat": 46.87127475,
+    "lon": 8.43687155,
+    "ele": "1,713"
+  },
+  {
+    "spot": "Brunnihütte",
+    "lat": 46.841153,
+    "lon": 8.4109691,
+    "ele": "1,860"
+  },
+  {
+    "spot": "Gelmersee",
+    "lat": 46.61567185,
+    "lon": 8.33147052,
+    "ele": "1,850"
+  },
+  {
+    "spot": "Jöriseen",
+    "lat": 46.7794232,
+    "lon": 9.970663,
+    "ele": null
   },
   {
     "spot": "Cliffs of Moher",

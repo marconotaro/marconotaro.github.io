@@ -31,8 +31,8 @@ var spots=[
   },
   {
     "spot": "Mont Saint Michel",
-    "lat": 48.6358559,
-    "lon": -1.5126096
+    "lat": 48.6355232,
+    "lon": -1.5102571
   },
   {
     "spot": "Strasbourg",
