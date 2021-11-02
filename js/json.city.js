@@ -26,13 +26,13 @@ var spots=[
   },
   {
     "spot": "Paris",
-    "lat": 48.8566969,
-    "lon": 2.3514616
+    "lat": 48.8588897,
+    "lon": 2.32004102172008
   },
   {
     "spot": "Mont Saint Michel",
-    "lat": 48.6355232,
-    "lon": -1.5102571
+    "lat": 48.6359541,
+    "lon": -1.51145995495951
   },
   {
     "spot": "Strasbourg",
@@ -61,8 +61,8 @@ var spots=[
   },
   {
     "spot": "Trento",
-    "lat": 46.0664228,
-    "lon": 11.1257601
+    "lat": 46.102817,
+    "lon": 11.1295430998718
   },
   {
     "spot": "Florence",
@@ -126,8 +126,8 @@ var spots=[
   },
   {
     "spot": "Bologna",
-    "lat": 44.4937577,
-    "lon": 11.3430308
+    "lat": 44.4938203,
+    "lon": 11.3426327
   },
   {
     "spot": "Dublin",
@@ -136,8 +136,8 @@ var spots=[
   },
   {
     "spot": "Cambridge",
-    "lat": 52.2034823,
-    "lon": 0.1235817
+    "lat": 52.2055314,
+    "lon": 0.1186637
   },
   {
     "spot": "Corfu",
@@ -181,8 +181,8 @@ var spots=[
   },
   {
     "spot": "Granada (Andalusia)",
-    "lat": 37.183054,
-    "lon": -3.6021928
+    "lat": 37.1734995,
+    "lon": -3.5995337
   },
   {
     "spot": "Cordova",
@@ -220,3 +220,4 @@ var spots=[
     "lon": 20.0602114
   }
 ]
+

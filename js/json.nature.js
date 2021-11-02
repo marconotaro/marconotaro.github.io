@@ -72,13 +72,13 @@ var spots=[
     "ele": "1,265"
   },
   {
-    "spot": "Rifugio Tagliaferri",
+    "spot": "Rifugio Nani Tagliaferri",
     "lat": 46.05539045,
     "lon": 10.11469431,
     "ele": "2,328"
   },
   {
-    "spot": "Pizzo Tre Signori",
+    "spot": "Pizzo dei Tre Signori",
     "lat": 46.011533,
     "lon": 9.527442,
     "ele": "2,553"
@@ -102,7 +102,7 @@ var spots=[
     "ele": "2,339"
   },
   {
-    "spot": "Station Punta Helbronner",
+    "spot": "Punta Helbronner",
     "lat": 45.8458717,
     "lon": 6.9317558,
     "ele": "3,462"
@@ -199,9 +199,9 @@ var spots=[
   },
   {
     "spot": "Pizolhütte",
-    "lat": 46.9792258,
-    "lon": 9.4170382,
-    "ele": "2,221"
+    "lat": 46.97883665,
+    "lon": 9.41713755,
+    "ele": "2,222"
   },
   {
     "spot": "Suls-Lobhornhütte",
@@ -241,8 +241,8 @@ var spots=[
   },
   {
     "spot": "Davos",
-    "lat": 46.7961744,
-    "lon": 9.8237266,
+    "lat": 46.796198,
+    "lon": 9.8236892,
     "ele": "1,560"
   },
   {
@@ -252,7 +252,7 @@ var spots=[
     "ele": "662"
   },
   {
-    "spot": "Muttseehuette",
+    "spot": "Muttseehütte",
     "lat": 46.85747595,
     "lon": 9.01878839,
     "ele": "2,501"
@@ -271,9 +271,9 @@ var spots=[
   },
   {
     "spot": "Chrüzhütte",
-    "lat": 46.87127475,
-    "lon": 8.43687155,
-    "ele": "1,713"
+    "lat": 46.8718105,
+    "lon": 8.4361579,
+    "ele": null
   },
   {
     "spot": "Brunnihütte",
@@ -292,6 +292,54 @@ var spots=[
     "lat": 46.7794232,
     "lon": 9.970663,
     "ele": null
+  },
+  {
+    "spot": "Trifthütte (Oberland)",
+    "lat": 46.67791415,
+    "lon": 8.37665861,
+    "ele": "2,525"
+  },
+  {
+    "spot": "Hoher Kasten Bergstation",
+    "lat": 47.2838155,
+    "lon": 9.484975,
+    "ele": null
+  },
+  {
+    "spot": "Berggasthaus Staubern",
+    "lat": 47.26062055,
+    "lon": 9.45329896,
+    "ele": null
+  },
+  {
+    "spot": "Saxerlücke",
+    "lat": 47.2472639,
+    "lon": 9.4247692,
+    "ele": "1,649"
+  },
+  {
+    "spot": "Fählensee",
+    "lat": 47.2518437,
+    "lon": 9.41917862,
+    "ele": "1,447"
+  },
+  {
+    "spot": "Berggasthaus Aescher-Wildkirchli",
+    "lat": 47.2833952,
+    "lon": 9.4144537,
+    "ele": null
+  },
+  {
+    "spot": "Ebenalp (Appenzell)",
+    "lat": 47.2842056,
+    "lon": 9.4109863,
+    "ele": null
+  },
+  {
+    "spot": "Seealpsee",
+    "lat": 47.2682729,
+    "lon": 9.40076732,
+    "ele": "1,141"
   },
   {
     "spot": "Cliffs of Moher",
@@ -343,8 +391,8 @@ var spots=[
   },
   {
     "spot": "Yaliskari",
-    "lat": 39.5772842,
-    "lon": 19.8259723,
+    "lat": 39.57785245,
+    "lon": 19.82593409,
     "ele": null
   },
   {
@@ -366,3 +414,4 @@ var spots=[
     "ele": null
   }
 ]
+
