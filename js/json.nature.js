@@ -342,6 +342,18 @@ var spots=[
     "ele": "1,141"
   },
   {
+    "spot": "Laax",
+    "lat": 46.806412,
+    "lon": 9.2581267,
+    "ele": "1,016"
+  },
+  {
+    "spot": "Stn. Crap Masegn",
+    "lat": 46.8422365,
+    "lon": 9.1799574,
+    "ele": "2,472"
+  },
+  {
     "spot": "Cliffs of Moher",
     "lat": 52.9717877,
     "lon": -9.4291244,
