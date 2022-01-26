@@ -101,9 +101,9 @@
 
     <h3>Research Interests</h3>
       <p>
-        During my PhD, I focused on the analysis and construction of complex biomolecular networks and on design and implementation of output-structured learning algorithms
-        for gene/protein function prediction and for the discovery of novel associations between human gene and abnormal phenotype.
-        More in general, my research lines can be grouped as follow:
+        <!-- During my PhD, I focused on the analysis and construction of complex biomolecular networks and on design and implementation of output-structured learning algorithms
+        for gene/protein function prediction and for the discovery of novel associations between human gene and abnormal phenotype. -->
+       <!--  My research lines can be grouped as follow: -->
       </p>
       <ol class="research">
         <li class="research">
@@ -126,13 +126,17 @@
           <b>NEXT GENERATION SEQUENCING</b><br> application of computational tools for the analysis of genetic variants in sequencing data, such as copy number,
           single nucleotide variants, INDELs and the analysis of next-generation ChIP/RNA-Seq data sequencing data.
         </li>
+        <li class="research">
+          <b>MULTI-OMICS DATA</b><br> disentangling multi-omics data through statistical approaches and building up web applications to support clients
+          in the process of hypothesis generation.
+        </li>
       </ol>
 
       <h3>Interdisciplinary Research</h3>
       The pie chart displayed below groups my publications by subject area.
       From this graph it is clear how my research interests are equally spanned over the areas of Computer Science, Mathematics and Biomolecular
       Science (Biochemistry, Genetics and Molecular Biology).
-      The pie graph shown below was created by <a target="_blank" href="https://plot.ly/">Plotly</a>, whereas the partition of publications by subject area is taken from <a target="_blank" href="https://www.scopus.com/hirsch/author.uri?accessor=authorProfile&auidList=56728073200&authorName=Notaro%2c+Marco&origin=AuthorProfile&txGid=f3e62d6905193fbc2446abc5b36bf94f">Scopus - Documents by subject area</a>.
+      The pie graph shown below was created by <a target="_blank" href="https://plot.ly/">Plotly</a>, whereas the partition of publications by subject area is taken from <a target="_blank" href="https://www.scopus.com/hirsch/author.uri?accessor=authorProfile&auidList=56728073200&origin=AuthorProfile">Scopus - Documents by subject area</a>.
 
       <div id="plotly"></div>
       <script>
@@ -144,12 +148,14 @@
         function WidthChange(mq){
           if(mq.matches){
             var data = [{
-              values: [7,7,4,1],
+              values: [9,9,8,2,1,1],
               labels: [ 'Computer Science',
-                    'Mathematics',
-                    'Biochemistry, Genetics and Molecular Biology',
-                    'Agricultural and Biological Sciences'
-                  ],
+                        'Mathematics',
+                        'Biochemistry, Genetics and Molecular Biology',
+                        'Agricultural and Biological Sciences',
+                        'Medicine',
+                        'Multidisciplinary'
+                      ],
               type: 'pie',
               hoverinfo: "label+percent",
               textinfo: "label+percent",
@@ -192,12 +198,14 @@
             Plotly.newPlot('plotly', data, layout, config);
           }else{
             var data = [{
-              values: [7,7,4,1],
+              values: [9,9,8,2,1,1],
               labels: [ 'Computer Science',
-                    'Mathematics',
-                    'Biochemistry, Genetics and Molecular Biology',
-                    'Agricultural and Biological Sciences'
-                  ],
+                        'Mathematics',
+                        'Biochemistry, Genetics and Molecular Biology',
+                        'Agricultural and Biological Sciences',
+                        'Medicine',
+                        'Multidisciplinary'
+                      ],
               type: 'pie',
               hoverinfo: "label+percent",
               textinfo: "label+percent",
