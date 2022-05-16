@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Marco Notaro OSM</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Marco Notaro">
+  <meta name="description" content="Marco Notaro WebSite">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to make the site responsive -->
+  <meta name="keywords" content="openstreetmap, mapbox, visited places, world">
+  <link rel="shortcut icon" href="img/wolf.gif">
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@latest/dist/Control.Geocoder.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" type="text/css" href="css/control.full.screen.css">
+  <script src="https://unpkg.com/leaflet@latest/dist/leaflet-src.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder@latest/dist/Control.Geocoder.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+  <script type="text/javascript" src="js/control.full.screen.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <a href="index.html" title="Marco Notaro"><img id="logo" src="img/marcologo.png" alt="Marco Notaro" height="50"></a>
+    </div>
+
+    <div id="navigationbar">
+      <div id="navigation">
+        <ul class="menubar">
+          <li><b><a class="menubar" href="index.html">Home</a></b></li>
+          <li><b><a class="menubar" href="research.html">Research</a></b></li>
+          <li><b><a class="menubar" href="teaching.html">Teaching</a></b></li>
+          <li><b><a class="menubar" href="publications.html">Publications</a></b></li>
+          <li><b><a class="menubar" href="software.html">Software</a></b></li>
+          <li><b><a class="menubar" href="map.html">Visited Places</a></b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bodycontainer">
+      <p>
+        To cluster the markers in the maps below I used the <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank"> markercluster</a> plugin.
+        Click on the bubble to blow the area up. Click on the marker to display the info window.
+      </p>
+      <p>
+        <b>City Map</b>: the main beautiful cities that I visited.
+      </p>
+      <div id="citymap"></div>
+      <br>
+      <p>
+        <b>Nature Map</b>: a selection of the most awesome and uncontaminated natural places that I visited.
+      </p>
+      <div id="naturemap"></div>
+      <script type="text/javascript" src="js/json.spots.js"></script>
+      <script type="text/javascript" src="js/leaflet.map.js"></script>
+    </div> <!-- end bodycontainer -->
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
+

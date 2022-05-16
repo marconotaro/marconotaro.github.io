@@ -119,7 +119,14 @@ img#logo{
     max-width: 100%;
 }
 
-div#map{
+div#citymap{
+    width: 100%;
+    height: 400px;
+    background-color: #808080;
+    margin-bottom: 0.5em;
+}
+
+div#naturemap{
     width: 100%;
     height: 400px;
     background-color: #808080;
