@@ -45,8 +45,8 @@ var citySpots = [
   },
   {
     "spot": "Chamonix-Mont-Blanc",
-    "lat": 45.92956455,
-    "lon": 6.93400526514657
+    "lat": 45.92818075,
+    "lon": 6.93417234520113
   },
   {
     "spot": "Milan",
@@ -110,8 +110,8 @@ var citySpots = [
   },
   {
     "spot": "Cagliari",
-    "lat": 39.2169525,
-    "lon": 9.1128513,
+    "lat": 39.2171994,
+    "lon": 9.113311,
     "ele": 23
   },
   {
@@ -249,6 +249,47 @@ var citySpots = [
     "spot": "Wieliczka",
     "lat": 49.9823773,
     "lon": 20.0602114
+  },
+  {
+    "spot": "Lauterbrunnen",
+    "lat": 46.5939043,
+    "lon": 7.9078016
+  },
+  {
+    "spot": "Flims",
+    "lat": 46.8332439,
+    "lon": 9.2834557,
+    "ele": 1081
+  },
+  {
+    "spot": "Stoss",
+    "lat": 47.3608444,
+    "lon": 9.4948897,
+    "ele": 943
+  },
+  {
+    "spot": "Rigi",
+    "lat": 47.0567184,
+    "lon": 8.4853157,
+    "ele": 1797.52
+  },
+  {
+    "spot": "Davos",
+    "lat": 46.796198,
+    "lon": 9.8236892,
+    "ele": 1560
+  },
+  {
+    "spot": "Innerarosa",
+    "lat": 46.774461,
+    "lon": 9.6597439,
+    "ele": 1820
+  },
+  {
+    "spot": "Montreux",
+    "lat": 46.4310831,
+    "lon": 6.9129921,
+    "ele": 390
   }
 ]
 
@@ -407,11 +448,6 @@ var natureSpots = [
     "lon": 9.4066598
   },
   {
-    "spot": "Lauterbrunnen",
-    "lat": 46.5939043,
-    "lon": 7.9078016
-  },
-  {
     "spot": "Schilthorn",
     "lat": 46.5572822,
     "lon": 7.8351745,
@@ -428,18 +464,6 @@ var natureSpots = [
     "lon": 8.0775081486158
   },
   {
-    "spot": "Stoss",
-    "lat": 47.3608444,
-    "lon": 9.4948897,
-    "ele": 943
-  },
-  {
-    "spot": "Rigi",
-    "lat": 47.0567184,
-    "lon": 8.4853157,
-    "ele": 1797.52
-  },
-  {
     "spot": "Pizolhütte",
     "lat": 46.97883665,
     "lon": 9.41713755242541,
@@ -450,12 +474,6 @@ var natureSpots = [
     "lat": 46.6184883,
     "lon": 7.8689998,
     "ele": 1955
-  },
-  {
-    "spot": "Flims",
-    "lat": 46.8332439,
-    "lon": 9.2834557,
-    "ele": 1081
   },
   {
     "spot": "Caumasee",
@@ -474,18 +492,6 @@ var natureSpots = [
     "lat": 46.727896,
     "lon": 9.5568344,
     "ele": 1476
-  },
-  {
-    "spot": "Innerarosa",
-    "lat": 46.774461,
-    "lon": 9.6597439,
-    "ele": 1820
-  },
-  {
-    "spot": "Davos",
-    "lat": 46.796198,
-    "lon": 9.8236892,
-    "ele": 1560
   },
   {
     "spot": "Linthal (Switzerland)",
@@ -588,6 +594,24 @@ var natureSpots = [
     "lat": 46.8422365,
     "lon": 9.1799574,
     "ele": 2472
+  },
+  {
+    "spot": "Linthal (Switzerland)",
+    "lat": 46.918987,
+    "lon": 8.99714,
+    "ele": 662
+  },
+  {
+    "spot": "Les Pléiades",
+    "lat": 46.4820859,
+    "lon": 6.9092392,
+    "ele": 1360
+  },
+  {
+    "spot": "Rochers-de-Naye",
+    "lat": 46.4318192,
+    "lon": 6.976051,
+    "ele": 2045
   },
   {
     "spot": "Aiguille du Midi",

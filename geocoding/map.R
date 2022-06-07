@@ -60,7 +60,9 @@ citySpots <- c(
   ## Gran Canaria (Spain)
   "Gran Canaria", "Fuerteventura", "Lanzarote",
   ## Poland
-  "Wieliczka"
+  "Wieliczka",
+  ## Switzerland
+  "Lauterbrunnen", "Flims", "Stoss", "Rigi", "Davos", "Innerarosa", "Montreux"
 )
 cat("tot. city spots: ", length(citySpots),"\n")
 
@@ -77,11 +79,10 @@ natureSpots <- c(
   ## Italy - Sardinia
   "Costa Rei", "Villasimius", "Asinara Sardegna", "La Maddalena",
   ## Switzerland
-  "Lauterbrunnen", "Schilthorn", "Rheinfall (Switzerland)", "Grosser Aletschgletscher", "Stoss", "Rigi", "Pizolhütte",
-  "Suls-Lobhornhütte", "Flims", "Caumasee", "Sardonahütte", "Lenzerheide", "Innerarosa", "Davos", "Linthal (Switzerland)",
-  "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen", "Trifthütte (Oberland)",
-  "Hoher Kasten Bergstation", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
-  "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn",
+  "Schilthorn", "Rheinfall (Switzerland)", "Grosser Aletschgletscher", "Pizolhütte", "Suls-Lobhornhütte", "Caumasee", "Sardonahütte",
+  "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen",
+  "Trifthütte (Oberland)","Hoher Kasten Bergstation", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
+  "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye",
   ## France
   "Aiguille du Midi",
   ## Dublin
