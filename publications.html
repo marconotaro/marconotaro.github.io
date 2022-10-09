@@ -12,6 +12,12 @@
   <link rel="shortcut icon" href="img/wolf.gif">
   <link rel="stylesheet" type="text/css" href="css/css.css">
   <script src="js/reverse.ordering.js"></script>
+  <!--
+    Note: plotly-latest (e.g. plotly-latest.min.js) will no longer be updated on the CDN,
+          and will stay at the last v1 patch v1.58.5. To use the CDN with plotly.js v2 and higher,
+          you must specify an exact plotly.js version.
+  -->
+  <script src="https://cdn.plot.ly/plotly-2.15.0.js"></script>
 </head>
 
 <body>
@@ -268,9 +274,63 @@
             </p>
           </li>
         </ol>
+
+      <h3 style="padding-top: 0.75em">Interdisciplinary Publications</h3>
+      <p>
+        The below pie chart displays my publications by subject area - data taken from
+        <a target="_blank" href="https://www.scopus.com/hirsch/author.uri?accessor=authorProfile&auidList=56728073200&origin=AuthorProfile"> my Scopus page</a>.
+      </p>
+      <div id="plotly"></div>
+      <script>
+        var config = {
+          responsive: true,
+          displayModeBar: true,
+          modeBarButtonsToRemove: ['toImage'],
+          automargin: true,
+          autosize: true
+        }
+        var data = [{
+          values: [11,9,8,2,1,1,1],
+          labels: [ 'Computer Science',
+                    'Mathematics',
+                    'Biochemistry, Genetics and Molecular Biology',
+                    'Agricultural and Biological Sciences',
+                    'Decision Sciences',
+                    'Medicine',
+                    'Multidisciplinary'
+                  ],
+          type: 'pie',
+          hoverinfo: "label+percent",
+          textinfo: "label+percent",
+          textposition: "inside",
+          insidetextorientation: "auto",
+        }];
+        var layout = {
+          showlegend: true,
+          title: {
+            text:'<b>Publications by Subject Area</b>',
+            font: {
+              family: 'Courier New, monospace',
+              size: 12,
+            }
+          },
+          legend: {
+            "orientation": "h",
+            font: {
+              family: 'sans-serif',
+            }
+          },
+          margin: { "t": 50, "b": 0, "l": 0, "r": 0 },
+          font: {
+            family: 'sans-serif',
+            size: 12
+          }
+        };
+        Plotly.newPlot('plotly', data, layout, config);
+      </script>
+    <script> reverse_lists(); </script>
     </div> <!-- end bodycontainer -->
     <div id="footer"></div>
-    <script> reverse_lists(); </script>
   </div>  <!-- end container -->
 </body>
 </html>

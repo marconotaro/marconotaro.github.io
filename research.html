@@ -88,12 +88,7 @@
         is simultaneously challenging and captivating!!
       </p>
 
-    <h3>Research Interests</h3>
-      <p>
-        <!-- During my PhD, I focused on the analysis and construction of complex biomolecular networks and on design and implementation of output-structured learning algorithms
-        for gene/protein function prediction and for the discovery of novel associations between human gene and abnormal phenotype. -->
-       <!--  My research lines can be grouped as follow: -->
-      </p>
+    <h3>Area of Interests</h3>
       <ol class="research">
         <li class="research">
           <b>BIO-MOLECULAR NETWORKS</b><br> analysis and construction of complex biomolecular networks by making use of database such as
@@ -113,129 +108,13 @@
         </li>
         <li class="research">
           <b>NEXT GENERATION SEQUENCING</b><br> application of computational tools for the analysis of genetic variants in sequencing data, such as copy number,
-          single nucleotide variants, INDELs and the analysis of next-generation ChIP/RNA-Seq data sequencing data.
+          single nucleotide variants, INDELs and the analysis of next-generation RNA/ATAC/ChIP-Seq data sequencing data.
         </li>
         <li class="research">
           <b>MULTI-OMICS DATA</b><br> disentangling multi-omics data through statistical approaches and building up shiny applications to support clients
           in the process of hypotheses generation.
         </li>
       </ol>
-
-      <h3>Interdisciplinary Research</h3>
-      The pie chart displayed below groups my publications by subject area.
-      From this graph it is clear how my research interests are equally spanned over the areas of Computer Science, Mathematics and Biomolecular
-      Science (Biochemistry, Genetics and Molecular Biology).
-      The pie graph shown below was created by <a target="_blank" href="https://plot.ly/">Plotly</a>, whereas the partition of publications by subject area is taken from <a target="_blank" href="https://www.scopus.com/hirsch/author.uri?accessor=authorProfile&auidList=56728073200&origin=AuthorProfile">Scopus - Documents by subject area</a>.
-
-      <div id="plotly"></div>
-      <script>
-        if (matchMedia){
-          const mq = window.matchMedia("(max-width: 960px)");
-          mq.addListener(WidthChange);
-          WidthChange(mq);
-        }
-        function WidthChange(mq){
-          if(mq.matches){
-            var data = [{
-              values: [9,9,8,2,1,1],
-              labels: [ 'Computer Science',
-                        'Mathematics',
-                        'Biochemistry, Genetics and Molecular Biology',
-                        'Agricultural and Biological Sciences',
-                        'Medicine',
-                        'Multidisciplinary'
-                      ],
-              type: 'pie',
-              hoverinfo: "label+percent",
-              textinfo: "label+percent",
-              textposition: "inside",
-              insidetextorientation: "auto",
-              automargin: true
-            }];
-
-            var layout = {
-            automargin: true,
-              showlegend: true,
-              title: {
-                text:'<b>Documents by subject area</b>',
-                font: {
-                  family: 'Courier New, monospace',
-                  size: 13,
-                }
-              },
-              legend: {
-                "orientation": "h",
-                font: {
-                  family: 'sans-serif',
-                  siee: 2
-                }
-              },
-              margin: { "t": 50, "b": 0, "l": 0, "r": 0 },
-              font: {
-                family: 'sans-serif',
-                size: 12
-              }
-            };
-
-            var config = {
-              responsive: true,
-              displayModeBar: false,
-              // modeBarButtonsToRemove: ['toImage', 'hoverClosestPie'],
-              // displaylogo: true
-            }
-
-            Plotly.newPlot('plotly', data, layout, config);
-          }else{
-            var data = [{
-              values: [9,9,8,2,1,1],
-              labels: [ 'Computer Science',
-                        'Mathematics',
-                        'Biochemistry, Genetics and Molecular Biology',
-                        'Agricultural and Biological Sciences',
-                        'Medicine',
-                        'Multidisciplinary'
-                      ],
-              type: 'pie',
-              hoverinfo: "label+percent",
-              textinfo: "label+percent",
-              textposition: "outside",
-              automargin: true
-            }];
-
-            var layout = {
-            automargin: true,
-              showlegend: true,
-              title: {
-                text:'<b>Documents by subject area</b>',
-                font: {
-                  family: 'Courier New, monospace',
-                  size: 16,
-                }
-              },
-              legend: {
-                "orientation": "h",
-                font: {
-                  family: 'sans-serif',
-                }
-              },
-              margin: { "t": 80, "b": 80, "l": 0, "r": 0 },
-              font: {
-                family: 'sans-serif',
-                size: 12
-              }
-            };
-
-            var config = {
-              responsive: true,
-              displayModeBar: false,
-              // modeBarButtonsToRemove: ['toImage', 'hoverClosestPie'],
-              // displaylogo: true
-            }
-
-            Plotly.newPlot('plotly', data, layout, config);
-          }
-        }
-      </script>
     </div> <!-- end bodycontainer -->
     <div id="footer"></div>
   </div>  <!-- end container -->
