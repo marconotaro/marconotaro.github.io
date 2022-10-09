@@ -194,19 +194,19 @@ ol.teaching{
     margin-left: -1em;
 }
 
-ol.research{
+ol.interest{
     line-height: 1.4em;
     list-style-type: upper-alpha;
     margin-top: 0.8em;
     margin-left: -0.5em;
 }
 
-li.research{
+li.interest{
     margin-top: 0.8em;
     margin-left: -0.5em;
 }
 
-ul.research{
+ul.interest{
     line-height: 1.4em;
     margin-top: 0.8em;
     margin-left: -0.5em;
@@ -219,7 +219,7 @@ ul.teaching{
     margin-left: -1em;
 }
 
-li.research{
+li.interest{
     margin-bottom: 0.8em;
 }
 
