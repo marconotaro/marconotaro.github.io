@@ -5,6 +5,7 @@ start <- proc.time()
 
 library(jsonlite)
 library(dplyr)
+library(here)
 options(digits = "10")
 
 ## get latitude and longitude
@@ -54,9 +55,9 @@ citySpots <- c(
   ## Australia
   "Sydney", "Canberra", "Wollongong", "Cronulla",
   ## Switzerland
-  "Zurich", "Basel", "Saint Moritz",
+  "Zurich", "Basel", "Saint Moritz", "Sion",
   ## Spain
-  "Granada (Andalusia)", "Cordova", "Sevilla", "Barcelona",
+  "Granada (Andalusia)", "Guadix", "Cordova", "Sevilla", "Barcelona",
   ## Gran Canaria (Spain)
   "Gran Canaria", "Fuerteventura", "Lanzarote",
   ## Poland
@@ -82,9 +83,11 @@ natureSpots <- c(
   "Schilthorn", "Rheinfall (Switzerland)", "Grosser Aletschgletscher", "Pizolhütte", "Suls-Lobhornhütte", "Caumasee", "Sardonahütte",
   "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen",
   "Trifthütte (Oberland)","Hoher Kasten Bergstation", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
-  "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye",
+  "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye", "Lac Souterrain",
   ## France
   "Aiguille du Midi",
+  ## Azores
+  "Flores (Azores)", "Corvo", "Faial", "Sao Miguel",
   ## Dublin
   "Cliffs of Moher",
   ## Spain
@@ -122,7 +125,7 @@ dfNature <- dfNature %>%
   data.frame()
 
 ## save spots in a json format
-ff <- file("../js/json.spots.js", "w")
+ff <- file(here::here("js/json.spots.js"), "w")
 
 writeLines("var citySpots = ", con = ff, sep = "")
 dfCity %>%

@@ -45,8 +45,8 @@ var citySpots = [
   },
   {
     "spot": "Chamonix-Mont-Blanc",
-    "lat": 45.92818075,
-    "lon": 6.93417234520113
+    "lat": 45.9246705,
+    "lon": 6.8727506
   },
   {
     "spot": "Milan",
@@ -154,14 +154,14 @@ var citySpots = [
   },
   {
     "spot": "Dublin",
-    "lat": 53.3497645,
-    "lon": -6.2602732,
+    "lat": 53.3498006,
+    "lon": -6.2602964,
     "ele": 20
   },
   {
     "spot": "Cambridge",
-    "lat": 52.2055314,
-    "lon": 0.1186637
+    "lat": 52.19758465,
+    "lon": 0.139153737368744
   },
   {
     "spot": "Corfu",
@@ -180,8 +180,8 @@ var citySpots = [
   },
   {
     "spot": "Wollongong",
-    "lat": -34.4243941,
-    "lon": 150.89385
+    "lat": -34.4278083,
+    "lon": 150.893054
   },
   {
     "spot": "Cronulla",
@@ -202,15 +202,26 @@ var citySpots = [
   },
   {
     "spot": "Saint Moritz",
-    "lat": 46.4960592,
-    "lon": 9.8386578,
+    "lat": 46.4978958,
+    "lon": 9.8392428,
     "ele": 1822
+  },
+  {
+    "spot": "Sion",
+    "lat": 43.73903,
+    "lon": 0.00822
   },
   {
     "spot": "Granada (Andalusia)",
     "lat": 37.1734995,
     "lon": -3.5995337,
     "ele": 684
+  },
+  {
+    "spot": "Guadix",
+    "lat": 37.3006914,
+    "lon": -3.1351956,
+    "ele": 913
   },
   {
     "spot": "Cordova",
@@ -281,8 +292,8 @@ var citySpots = [
   },
   {
     "spot": "Innerarosa",
-    "lat": 46.774461,
-    "lon": 9.6597439,
+    "lat": 46.7743471,
+    "lon": 9.6594006,
     "ele": 1820
   },
   {
@@ -483,8 +494,8 @@ var natureSpots = [
   },
   {
     "spot": "Sardonahütte",
-    "lat": 46.91548975,
-    "lon": 9.275424796808,
+    "lat": 46.91547395,
+    "lon": 9.27541919083333,
     "ele": 2158
   },
   {
@@ -552,8 +563,8 @@ var natureSpots = [
   },
   {
     "spot": "Berggasthaus Staubern",
-    "lat": 47.26062055,
-    "lon": 9.45329896406946
+    "lat": 47.26061145,
+    "lon": 9.45326006406946
   },
   {
     "spot": "Saxerlücke",
@@ -614,10 +625,35 @@ var natureSpots = [
     "ele": 2045
   },
   {
+    "spot": "Lac Souterrain",
+    "lat": 46.2569313,
+    "lon": 7.4258954
+  },
+  {
     "spot": "Aiguille du Midi",
     "lat": 45.8787077,
     "lon": 6.8874075,
     "ele": 3842
+  },
+  {
+    "spot": "Flores (Azores)",
+    "lat": 39.44789825,
+    "lon": -31.1969010864094
+  },
+  {
+    "spot": "Corvo",
+    "lat": 39.69771415,
+    "lon": -31.1052443560403
+  },
+  {
+    "spot": "Faial",
+    "lat": 38.57965385,
+    "lon": -28.7096455876289
+  },
+  {
+    "spot": "Sao Miguel",
+    "lat": 37.80855645,
+    "lon": -25.4731373912453
   },
   {
     "spot": "Cliffs of Moher",
@@ -636,8 +672,9 @@ var natureSpots = [
   },
   {
     "spot": "Roque Nublo",
-    "lat": 27.96798465,
-    "lon": -15.6122824356801
+    "lat": 27.9708896,
+    "lon": -15.6125928,
+    "ele": 1813
   },
   {
     "spot": "Dunas de Maspalomas",
@@ -646,8 +683,8 @@ var natureSpots = [
   },
   {
     "spot": "Parque Natural de Corralejo",
-    "lat": 28.7026411,
-    "lon": -13.8364422850612
+    "lat": 28.6920216,
+    "lon": -13.8449662609898
   },
   {
     "spot": "Lobos Island",
