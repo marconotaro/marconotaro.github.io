@@ -284,9 +284,7 @@
         var config = {
           responsive: true,
           displayModeBar: true,
-          modeBarButtonsToRemove: ['toImage'],
-          automargin: true,
-          autosize: true
+          modeBarButtonsToRemove: ['toImage']
         }
         var data = [{
           values: [11,9,8,2,1,1,1],
@@ -315,6 +313,8 @@
           },
           legend: {
             "orientation": "h",
+            itemclick: false,
+            itemdoubleclick: false,
             font: {
               family: 'sans-serif',
             }
