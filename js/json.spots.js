@@ -274,8 +274,8 @@ var citySpots = [
   },
   {
     "spot": "Stoss",
-    "lat": 47.3608444,
-    "lon": 9.4948897,
+    "lat": 47.3608471,
+    "lon": 9.4948877,
     "ele": 943
   },
   {
@@ -630,6 +630,17 @@ var natureSpots = [
     "lon": 7.4258954
   },
   {
+    "spot": "Lammerenhutte",
+    "lat": 46.40029365,
+    "lon": 7.57448610197454,
+    "ele": 2502
+  },
+  {
+    "spot": "Wildstrubelgletscher",
+    "lat": 46.4012841,
+    "lon": 7.5357404302791
+  },
+  {
     "spot": "Aiguille du Midi",
     "lat": 45.8787077,
     "lon": 6.8874075,
@@ -647,8 +658,8 @@ var natureSpots = [
   },
   {
     "spot": "Faial",
-    "lat": 38.57965385,
-    "lon": -28.7096455876289
+    "lat": 38.57956555,
+    "lon": -28.7096169312833
   },
   {
     "spot": "Sao Miguel",

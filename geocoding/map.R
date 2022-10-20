@@ -84,6 +84,7 @@ natureSpots <- c(
   "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen",
   "Trifthütte (Oberland)","Hoher Kasten Bergstation", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
   "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye", "Lac Souterrain",
+  "Lammerenhutte", "Wildstrubelgletscher",
   ## France
   "Aiguille du Midi",
   ## Azores
