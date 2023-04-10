@@ -30,8 +30,8 @@ var citySpots = [
   },
   {
     "spot": "Paris",
-    "lat": 48.8588897,
-    "lon": 2.32004102172008
+    "lat": 48.8534951,
+    "lon": 2.3483915
   },
   {
     "spot": "Mont Saint Michel",
@@ -71,8 +71,8 @@ var citySpots = [
   },
   {
     "spot": "Trento",
-    "lat": 46.1030443,
-    "lon": 11.1298403316951
+    "lat": 46.1029536,
+    "lon": 11.1297424941688
   },
   {
     "spot": "Florence",
@@ -160,8 +160,8 @@ var citySpots = [
   },
   {
     "spot": "Cambridge",
-    "lat": 52.19758465,
-    "lon": 0.139153737368744
+    "lat": 52.2055314,
+    "lon": 0.1186637
   },
   {
     "spot": "Corfu",
@@ -268,8 +268,8 @@ var citySpots = [
   },
   {
     "spot": "Flims",
-    "lat": 46.8332439,
-    "lon": 9.2834557,
+    "lat": 46.8368188,
+    "lon": 9.2864461,
     "ele": 1081
   },
   {
@@ -379,8 +379,8 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Nani Tagliaferri",
-    "lat": 46.05539045,
-    "lon": 10.1146943058521,
+    "lat": 46.05544065,
+    "lon": 10.1144391058521,
     "ele": 2328
   },
   {
@@ -433,8 +433,8 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Scoiattoli",
-    "lat": 46.50805945,
-    "lon": 12.0467579003444,
+    "lat": 46.50809505,
+    "lon": 12.0468251003444,
     "ele": 2255
   },
   {
@@ -523,8 +523,8 @@ var natureSpots = [
   },
   {
     "spot": "Oeschinensee",
-    "lat": 46.4984413,
-    "lon": 7.72648598387318,
+    "lat": 46.4984951,
+    "lon": 7.72684294441997,
     "ele": 1578
   },
   {
@@ -557,9 +557,10 @@ var natureSpots = [
     "ele": 2525
   },
   {
-    "spot": "Hoher Kasten Bergstation",
+    "spot": "Hoher Kasten 2",
     "lat": 47.2838155,
-    "lon": 9.484975
+    "lon": 9.484975,
+    "ele": 1791
   },
   {
     "spot": "Berggasthaus Staubern",
@@ -637,8 +638,24 @@ var natureSpots = [
   },
   {
     "spot": "Wildstrubelgletscher",
-    "lat": 46.4012841,
-    "lon": 7.5357404302791
+    "lat": 46.40090925,
+    "lon": 7.55446682727349
+  },
+  {
+    "spot": "Zermatt",
+    "lat": 46.0212076,
+    "lon": 7.749254,
+    "ele": 1608
+  },
+  {
+    "spot": "Zmutt",
+    "lat": 46.0064782,
+    "lon": 7.7170895
+  },
+  {
+    "spot": "Matterhorn Glacier Paradise",
+    "lat": 45.937489,
+    "lon": 7.7294556
   },
   {
     "spot": "Aiguille du Midi",
@@ -658,8 +675,8 @@ var natureSpots = [
   },
   {
     "spot": "Faial",
-    "lat": 38.57956555,
-    "lon": -28.7096169312833
+    "lat": 38.5795831,
+    "lon": -28.7096295478752
   },
   {
     "spot": "Sao Miguel",
@@ -668,8 +685,8 @@ var natureSpots = [
   },
   {
     "spot": "Cliffs of Moher",
-    "lat": 52.9717877,
-    "lon": -9.4291244
+    "lat": 52.9595033,
+    "lon": -9.4441796
   },
   {
     "spot": "Cofete",
@@ -710,8 +727,8 @@ var natureSpots = [
   },
   {
     "spot": "Yaliskari",
-    "lat": 39.57785245,
-    "lon": 19.82593408538
+    "lat": 39.57664885,
+    "lon": 19.8269651236169
   },
   {
     "spot": "Sidari (Corfù)",

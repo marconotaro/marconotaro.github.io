@@ -82,9 +82,9 @@ natureSpots <- c(
   ## Switzerland
   "Schilthorn", "Rheinfall (Switzerland)", "Grosser Aletschgletscher", "Pizolhütte", "Suls-Lobhornhütte", "Caumasee", "Sardonahütte",
   "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen",
-  "Trifthütte (Oberland)","Hoher Kasten Bergstation", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
+  "Trifthütte (Oberland)","Hoher Kasten 2", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
   "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye", "Lac Souterrain",
-  "Lammerenhutte", "Wildstrubelgletscher",
+  "Lammerenhutte", "Wildstrubelgletscher", "Zermatt", "Zmutt", "Matterhorn Glacier Paradise",
   ## France
   "Aiguille du Midi",
   ## Azores
