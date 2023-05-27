@@ -63,7 +63,9 @@ citySpots <- c(
   ## Poland
   "Wieliczka",
   ## Switzerland
-  "Lauterbrunnen", "Flims", "Stoss", "Rigi", "Davos", "Innerarosa", "Montreux"
+  "Lauterbrunnen", "Flims", "Stoss", "Rigi", "Davos", "Innerarosa", "Montreux", "St. Gallen",
+  ## United Kingdom
+  "London"
 )
 cat("tot. city spots: ", length(citySpots),"\n")
 

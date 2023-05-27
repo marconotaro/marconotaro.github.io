@@ -165,8 +165,8 @@ var citySpots = [
   },
   {
     "spot": "Corfu",
-    "lat": 39.591337,
-    "lon": 19.8596189187339
+    "lat": 39.623657,
+    "lon": 19.9234355
   },
   {
     "spot": "Sydney",
@@ -301,6 +301,18 @@ var citySpots = [
     "lat": 46.4310831,
     "lon": 6.9129921,
     "ele": 390
+  },
+  {
+    "spot": "St. Gallen",
+    "lat": 47.4250593,
+    "lon": 9.3765878,
+    "ele": 675
+  },
+  {
+    "spot": "London",
+    "lat": 51.5073359,
+    "lon": -0.12765,
+    "ele": 15
   }
 ]
 
@@ -313,8 +325,8 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Antonio Baroni al Brunone",
-    "lat": 46.0623605,
-    "lon": 9.96067115874704,
+    "lat": 46.062301,
+    "lon": 9.96052260848631,
     "ele": 2295
   },
   {
@@ -379,8 +391,8 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Nani Tagliaferri",
-    "lat": 46.05544065,
-    "lon": 10.1144391058521,
+    "lat": 46.05539045,
+    "lon": 10.1146943058521,
     "ele": 2328
   },
   {
@@ -582,7 +594,8 @@ var natureSpots = [
   {
     "spot": "Berggasthaus Aescher-Wildkirchli",
     "lat": 47.2833952,
-    "lon": 9.4144537
+    "lon": 9.4144537,
+    "ele": 1454
   },
   {
     "spot": "Ebenalp (Appenzell)",
@@ -654,8 +667,8 @@ var natureSpots = [
   },
   {
     "spot": "Matterhorn Glacier Paradise",
-    "lat": 45.937489,
-    "lon": 7.7294556
+    "lat": 45.9383473,
+    "lon": 7.7292141
   },
   {
     "spot": "Aiguille du Midi",
@@ -711,8 +724,8 @@ var natureSpots = [
   },
   {
     "spot": "Parque Natural de Corralejo",
-    "lat": 28.6920216,
-    "lon": -13.8449662609898
+    "lat": 28.7026411,
+    "lon": -13.8364422850612
   },
   {
     "spot": "Lobos Island",
