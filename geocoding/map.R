@@ -14,7 +14,7 @@ getLatLon <- function(address=NULL){
     return(data.frame())
   tryCatch(
     d <- fromJSON(
-      gsub('\\@addr\\@', gsub('\\s+', '\\%20', address), 'http://nominatim.openstreetmap.org/search/@addr@?format=json&extratags=1&limit=1')
+      gsub('\\@addr\\@', gsub('\\s+', '\\%20', address), 'http://nominatim.openstreetmap.org/search?q=@addr@&format=json&extratags=1&limit=1')
     ),
     error = function(c) return(data.frame())
   )
@@ -65,10 +65,11 @@ citySpots <- c(
   ## Switzerland
   "Lauterbrunnen", "Flims", "Stoss", "Rigi", "Davos", "Innerarosa", "Montreux", "St. Gallen",
   ## United Kingdom
-  "London"
+  "London",
+  ## US
+  "Washington", "New York"
 )
 cat("tot. city spots: ", length(citySpots),"\n")
-
 
 ## natural places
 natureSpots <- c(
@@ -83,10 +84,13 @@ natureSpots <- c(
   "Costa Rei", "Villasimius", "Asinara Sardegna", "La Maddalena",
   ## Switzerland
   "Schilthorn", "Rheinfall (Switzerland)", "Grosser Aletschgletscher", "Pizolhütte", "Suls-Lobhornhütte", "Caumasee", "Sardonahütte",
-  "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen",
-  "Trifthütte (Oberland)","Hoher Kasten 2", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
+  "Lenzerheide", "Linthal (Switzerland)", "Muttseehütte", "Limmerensee", "Oeschinensee", "Chrüzhütte", "Brunnihütte", "Gelmersee", "Jöriseen Flüelapass",
+  "Trifthütte (Oberland)","Hoher Kasten", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
   "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye", "Lac Souterrain",
   "Lammerenhutte", "Wildstrubelgletscher", "Zermatt", "Zmutt", "Matterhorn Glacier Paradise",
+  "Tierberglihütte", "Hörnlihütte", "Schönbielhütte", "Gandegghütte", "Berggasthaus Trift",
+  ## Austria
+  "Simonyhütte", "Wiesberghaus", "Eisriesenwelt",
   ## France
   "Aiguille du Midi",
   ## Azores
@@ -94,7 +98,7 @@ natureSpots <- c(
   ## Dublin
   "Cliffs of Moher",
   ## Spain
-  "Cofete", "Parque Nacional de Timanfaya ", "Roque Nublo", "Dunas de Maspalomas", "Parque Natural de Corralejo", "Lobos Island",
+  "Playa de Cofete", "Parque Nacional de Timanfaya ", "Roque Nublo", "Dunas de Maspalomas", "Parque Natural de Corralejo", "Lobos Island",
   ## Greek
   "Paleokastritsa", "Yaliskari", "Sidari (Corfù)",
   ## Australia
@@ -104,6 +108,7 @@ cat("tot. nature spots: ", length(natureSpots),"\n")
 
 ## compute nominatim_osm across spots
 dfCity <- lapply(citySpots, function(spot){
+  # print(spot) ## verbose for debugging
   api_output <- getLatLon(spot)
   if(nrow(api_output) == 0 & ncol(api_output) == 0){
     stop(paste(spot, "is no more (T_T) ... probably the name has been changed on nominatim ... manually inspect `nominatim.openstreetmap.org` to find the real name ... good luck )"))
@@ -112,6 +117,7 @@ dfCity <- lapply(citySpots, function(spot){
 })
 
 dfNature <- lapply(natureSpots, function(spot){
+  # print(spot) ## verbose for debugging
   api_output <- getLatLon(spot)
   if(nrow(api_output) == 0 & ncol(api_output) == 0){
     stop(paste(spot, "is no more (T_T) ... probably the name has been changed on nominatim ... manually inspect `nominatim.openstreetmap.org` to find the real name ... good luck )"))

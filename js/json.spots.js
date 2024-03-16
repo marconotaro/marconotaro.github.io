@@ -7,8 +7,8 @@ var citySpots = [
   },
   {
     "spot": "Baden-Baden",
-    "lat": 48.7580777,
-    "lon": 8.2415239
+    "lat": 48.7610716,
+    "lon": 8.239959
   },
   {
     "spot": "Berlin",
@@ -66,13 +66,14 @@ var citySpots = [
   },
   {
     "spot": "Siena (Italy)",
-    "lat": 43.1672254,
-    "lon": 11.4671811613391
+    "lat": 43.16720595,
+    "lon": 11.4675610404756
   },
   {
     "spot": "Trento",
-    "lat": 46.1029536,
-    "lon": 11.1297424941688
+    "lat": 46.0664228,
+    "lon": 11.1257601,
+    "ele": 194
   },
   {
     "spot": "Florence",
@@ -89,7 +90,7 @@ var citySpots = [
   {
     "spot": "Como",
     "lat": 45.9394759,
-    "lon": 9.14941014540895
+    "lon": 9.14941013254579
   },
   {
     "spot": "Rome",
@@ -154,8 +155,8 @@ var citySpots = [
   },
   {
     "spot": "Dublin",
-    "lat": 53.3498006,
-    "lon": -6.2602964,
+    "lat": 53.3493795,
+    "lon": -6.2605593,
     "ele": 20
   },
   {
@@ -165,8 +166,8 @@ var citySpots = [
   },
   {
     "spot": "Corfu",
-    "lat": 39.623657,
-    "lon": 19.9234355
+    "lat": 39.591337,
+    "lon": 19.8596189187339
   },
   {
     "spot": "Sydney",
@@ -268,20 +269,20 @@ var citySpots = [
   },
   {
     "spot": "Flims",
-    "lat": 46.8368188,
-    "lon": 9.2864461,
+    "lat": 46.8332439,
+    "lon": 9.2834557,
     "ele": 1081
   },
   {
     "spot": "Stoss",
-    "lat": 47.3608471,
+    "lat": 47.3608479,
     "lon": 9.4948877,
     "ele": 943
   },
   {
     "spot": "Rigi",
-    "lat": 47.0567184,
-    "lon": 8.4853157,
+    "lat": 47.0566777,
+    "lon": 8.4852649,
     "ele": 1797.52
   },
   {
@@ -304,15 +305,27 @@ var citySpots = [
   },
   {
     "spot": "St. Gallen",
-    "lat": 47.4250593,
-    "lon": 9.3765878,
+    "lat": 47.425618,
+    "lon": 9.3762397,
     "ele": 675
   },
   {
     "spot": "London",
-    "lat": 51.5073359,
-    "lon": -0.12765,
+    "lat": 51.5074456,
+    "lon": -0.1277653,
     "ele": 15
+  },
+  {
+    "spot": "Washington",
+    "lat": 38.8950368,
+    "lon": -77.0365427,
+    "ele": 7
+  },
+  {
+    "spot": "New York",
+    "lat": 40.7127281,
+    "lon": -74.0060152,
+    "ele": 10
   }
 ]
 
@@ -391,15 +404,15 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Nani Tagliaferri",
-    "lat": 46.05539045,
-    "lon": 10.1146943058521,
+    "lat": 46.05544065,
+    "lon": 10.1144391058521,
     "ele": 2328
   },
   {
     "spot": "Pizzo dei Tre Signori",
     "lat": 46.011533,
     "lon": 9.527442,
-    "ele": 2553
+    "ele": 2554
   },
   {
     "spot": "Lago Branchino",
@@ -427,20 +440,20 @@ var natureSpots = [
   },
   {
     "spot": "Rifugio Guido Larcher al Cevedale",
-    "lat": 46.4369195,
-    "lon": 10.6660521969564,
+    "lat": 46.4369158,
+    "lon": 10.6659938969564,
     "ele": 2608
   },
   {
     "spot": "Passo Forcola",
-    "lat": 46.4492425,
-    "lon": 10.6519884,
-    "ele": 3032
+    "lat": 46.440968,
+    "lon": 10.0561892,
+    "ele": 2315
   },
   {
     "spot": "Rifugio Nuvolau",
-    "lat": 46.4952253,
-    "lon": 12.045702161024,
+    "lat": 46.4953198,
+    "lon": 12.045895261024,
     "ele": 2575
   },
   {
@@ -488,9 +501,9 @@ var natureSpots = [
   },
   {
     "spot": "Pizolhütte",
-    "lat": 46.97883665,
-    "lon": 9.41713755242541,
-    "ele": 2222
+    "lat": 46.9789889,
+    "lon": 9.4166853,
+    "ele": 2220
   },
   {
     "spot": "Suls-Lobhornhütte",
@@ -512,8 +525,8 @@ var natureSpots = [
   },
   {
     "spot": "Lenzerheide",
-    "lat": 46.727896,
-    "lon": 9.5568344,
+    "lat": 46.7280297,
+    "lon": 9.5584408,
     "ele": 1476
   },
   {
@@ -524,8 +537,8 @@ var natureSpots = [
   },
   {
     "spot": "Muttseehütte",
-    "lat": 46.85747595,
-    "lon": 9.01878839295421,
+    "lat": 46.85750765,
+    "lon": 9.01877886145912,
     "ele": 2501
   },
   {
@@ -541,8 +554,8 @@ var natureSpots = [
   },
   {
     "spot": "Chrüzhütte",
-    "lat": 46.87127475,
-    "lon": 8.43687155,
+    "lat": 46.87126015,
+    "lon": 8.43686962743508,
     "ele": 1713
   },
   {
@@ -558,9 +571,9 @@ var natureSpots = [
     "ele": 1850
   },
   {
-    "spot": "Jöriseen",
-    "lat": 46.7794232,
-    "lon": 9.970663
+    "spot": "Jöriseen Flüelapass",
+    "lat": 46.7801706,
+    "lon": 9.9727307
   },
   {
     "spot": "Trifthütte (Oberland)",
@@ -569,15 +582,15 @@ var natureSpots = [
     "ele": 2525
   },
   {
-    "spot": "Hoher Kasten 2",
-    "lat": 47.2838155,
-    "lon": 9.484975,
-    "ele": 1791
+    "spot": "Hoher Kasten",
+    "lat": 47.2836205,
+    "lon": 9.4852538,
+    "ele": 1795
   },
   {
     "spot": "Berggasthaus Staubern",
-    "lat": 47.26061145,
-    "lon": 9.45326006406946
+    "lat": 47.2606376,
+    "lon": 9.45326499246518
   },
   {
     "spot": "Saxerlücke",
@@ -587,8 +600,8 @@ var natureSpots = [
   },
   {
     "spot": "Fählensee",
-    "lat": 47.2518437,
-    "lon": 9.41917861791215,
+    "lat": 47.25185905,
+    "lon": 9.41916013853121,
     "ele": 1447
   },
   {
@@ -671,9 +684,57 @@ var natureSpots = [
     "lon": 7.7292141
   },
   {
+    "spot": "Tierberglihütte",
+    "lat": 46.70203075,
+    "lon": 8.41421264594445,
+    "ele": 2795
+  },
+  {
+    "spot": "Hörnlihütte",
+    "lat": 45.9821974,
+    "lon": 7.6770109,
+    "ele": 3260
+  },
+  {
+    "spot": "Schönbielhütte",
+    "lat": 46.00198,
+    "lon": 7.6289566,
+    "ele": 2694
+  },
+  {
+    "spot": "Gandegghütte",
+    "lat": 45.9641383,
+    "lon": 7.72564939019713,
+    "ele": 3030
+  },
+  {
+    "spot": "Berggasthaus Trift",
+    "lat": 46.0300393,
+    "lon": 7.7210708,
+    "ele": 2337
+  },
+  {
+    "spot": "Simonyhütte",
+    "lat": 47.50079825,
+    "lon": 13.623882948551,
+    "ele": 2203
+  },
+  {
+    "spot": "Wiesberghaus",
+    "lat": 47.5204936,
+    "lon": 13.6261031282403,
+    "ele": 1884
+  },
+  {
+    "spot": "Eisriesenwelt",
+    "lat": 47.510864,
+    "lon": 13.1932301,
+    "ele": 1685
+  },
+  {
     "spot": "Aiguille du Midi",
-    "lat": 45.8787077,
-    "lon": 6.8874075,
+    "lat": 45.8787035,
+    "lon": 6.8875506,
     "ele": 3842
   },
   {
@@ -702,9 +763,9 @@ var natureSpots = [
     "lon": -9.4441796
   },
   {
-    "spot": "Cofete",
-    "lat": 28.1023118,
-    "lon": -14.3888189
+    "spot": "Playa de Cofete",
+    "lat": 28.1034297,
+    "lon": -14.4217910320086
   },
   {
     "spot": "Parque Nacional de Timanfaya ",
@@ -713,8 +774,8 @@ var natureSpots = [
   },
   {
     "spot": "Roque Nublo",
-    "lat": 27.9708896,
-    "lon": -15.6125928,
+    "lat": 27.970815,
+    "lon": -15.6125968,
     "ele": 1813
   },
   {
@@ -745,8 +806,8 @@ var natureSpots = [
   },
   {
     "spot": "Sidari (Corfù)",
-    "lat": 39.792821,
-    "lon": 19.7017291
+    "lat": 39.7941007,
+    "lon": 19.6987534
   },
   {
     "spot": "Blue Mountains National Park",
