@@ -30,8 +30,8 @@ var citySpots = [
   },
   {
     "spot": "Paris",
-    "lat": 48.8534951,
-    "lon": 2.3483915
+    "lat": 48.8588897,
+    "lon": 2.32004102172008
   },
   {
     "spot": "Mont Saint Michel",
@@ -181,8 +181,8 @@ var citySpots = [
   },
   {
     "spot": "Wollongong",
-    "lat": -34.4278083,
-    "lon": 150.893054
+    "lat": -34.4243941,
+    "lon": 150.89385
   },
   {
     "spot": "Cronulla",
@@ -261,6 +261,11 @@ var citySpots = [
     "spot": "Wieliczka",
     "lat": 49.9823773,
     "lon": 20.0602114
+  },
+  {
+    "spot": "Hallstatt",
+    "lat": 47.5621698,
+    "lon": 13.6486697
   },
   {
     "spot": "Lauterbrunnen",
@@ -513,8 +518,8 @@ var natureSpots = [
   },
   {
     "spot": "Caumasee",
-    "lat": 46.82021335,
-    "lon": 9.29630272479419,
+    "lat": 46.8202064,
+    "lon": 9.29630259976779,
     "ele": 997
   },
   {

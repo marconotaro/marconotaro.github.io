@@ -62,6 +62,8 @@ citySpots <- c(
   "Gran Canaria", "Fuerteventura", "Lanzarote",
   ## Poland
   "Wieliczka",
+  ## Austria
+  "Hallstatt",
   ## Switzerland
   "Lauterbrunnen", "Flims", "Stoss", "Rigi", "Davos", "Innerarosa", "Montreux", "St. Gallen",
   ## United Kingdom
@@ -105,6 +107,9 @@ natureSpots <- c(
   "Blue Mountains National Park", "Stanwell Park"
 )
 cat("tot. nature spots: ", length(natureSpots),"\n")
+
+## tot spots
+cat("tot. spots to localize: ", length(citySpots) + length(natureSpots), "\n")
 
 ## compute nominatim_osm across spots
 dfCity <- lapply(citySpots, function(spot){
