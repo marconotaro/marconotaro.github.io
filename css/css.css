@@ -175,6 +175,13 @@ ul.index{
   line-height: 1.4em;
 }
 
+ul.aboutme{
+  font-size: 13.5px;
+  margin-top: -0.5em;
+  margin-left: -2.3em;
+  line-height: 1.4em;
+}
+
 li.papers{
   font-size: 13px;
   margin-bottom: 1em;
