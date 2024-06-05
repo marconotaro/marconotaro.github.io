@@ -247,3 +247,8 @@ ul.software{
 li.software{
   padding-bottom: 0.7em;
 }
+
+img.icon{
+  width: 15px;
+  height: 15px;
+}
