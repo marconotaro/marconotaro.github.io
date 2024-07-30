@@ -12,8 +12,8 @@ var citySpots = [
   },
   {
     "spot": "Berlin",
-    "lat": 52.5170365,
-    "lon": 13.3888599,
+    "lat": 52.5108638,
+    "lon": 13.3989421,
     "ele": 35
   },
   {
@@ -30,8 +30,8 @@ var citySpots = [
   },
   {
     "spot": "Paris",
-    "lat": 48.8588897,
-    "lon": 2.32004102172008
+    "lat": 48.8534951,
+    "lon": 2.3483915
   },
   {
     "spot": "Mont Saint Michel",
@@ -77,8 +77,8 @@ var citySpots = [
   },
   {
     "spot": "Florence",
-    "lat": 43.7698712,
-    "lon": 11.2555757,
+    "lat": 43.7697955,
+    "lon": 11.2556404,
     "ele": 50
   },
   {
@@ -316,9 +316,8 @@ var citySpots = [
   },
   {
     "spot": "London",
-    "lat": 51.5074456,
-    "lon": -0.1277653,
-    "ele": 15
+    "lat": 51.4893335,
+    "lon": -0.144055084527687
   },
   {
     "spot": "Washington",
@@ -451,8 +450,8 @@ var natureSpots = [
   },
   {
     "spot": "Passo Forcola",
-    "lat": 46.440968,
-    "lon": 10.0561892,
+    "lat": 46.4409411,
+    "lon": 10.0561903,
     "ele": 2315
   },
   {
@@ -506,9 +505,9 @@ var natureSpots = [
   },
   {
     "spot": "Pizolhütte",
-    "lat": 46.9789889,
-    "lon": 9.4166853,
-    "ele": 2220
+    "lat": 46.9792258,
+    "lon": 9.4170382,
+    "ele": 2221
   },
   {
     "spot": "Suls-Lobhornhütte",
@@ -719,9 +718,15 @@ var natureSpots = [
     "ele": 2337
   },
   {
+    "spot": "Gelmerhütte",
+    "lat": 46.6312578,
+    "lon": 8.34278234741697,
+    "ele": 2412
+  },
+  {
     "spot": "Simonyhütte",
     "lat": 47.50079825,
-    "lon": 13.623882948551,
+    "lon": 13.623884588624,
     "ele": 2203
   },
   {
@@ -769,8 +774,8 @@ var natureSpots = [
   },
   {
     "spot": "Playa de Cofete",
-    "lat": 28.1034297,
-    "lon": -14.4217910320086
+    "lat": 28.1223414,
+    "lon": -14.359240491385
   },
   {
     "spot": "Parque Nacional de Timanfaya ",
@@ -811,8 +816,8 @@ var natureSpots = [
   },
   {
     "spot": "Sidari (Corfù)",
-    "lat": 39.7941007,
-    "lon": 19.6987534
+    "lat": 39.78853795,
+    "lon": 19.7128376363346
   },
   {
     "spot": "Blue Mountains National Park",

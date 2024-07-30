@@ -90,7 +90,7 @@ natureSpots <- c(
   "Trifthütte (Oberland)","Hoher Kasten", "Berggasthaus Staubern", "Saxerlücke", "Fählensee", "Berggasthaus Aescher-Wildkirchli",
   "Ebenalp (Appenzell)", "Seealpsee", "Laax", "Stn. Crap Masegn", "Linthal (Switzerland)", "Les Pléiades", "Rochers-de-Naye", "Lac Souterrain",
   "Lammerenhutte", "Wildstrubelgletscher", "Zermatt", "Zmutt", "Matterhorn Glacier Paradise",
-  "Tierberglihütte", "Hörnlihütte", "Schönbielhütte", "Gandegghütte", "Berggasthaus Trift",
+  "Tierberglihütte", "Hörnlihütte", "Schönbielhütte", "Gandegghütte", "Berggasthaus Trift", "Gelmerhütte",
   ## Austria
   "Simonyhütte", "Wiesberghaus", "Eisriesenwelt",
   ## France
