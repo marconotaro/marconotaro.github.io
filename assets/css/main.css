@@ -535,9 +535,9 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../img/bg/abstract-bg-1.webp") no-repeat center center;
+  background: url("../img/bg/matterhorn.jpg") no-repeat center center;
   background-size: cover;
-  opacity: 0.08;
+  opacity: 0.6;
   z-index: 1;
 }
 
