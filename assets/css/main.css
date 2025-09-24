@@ -509,8 +509,8 @@ section,
 }
 
 .section-title p {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 5px 0 0 0;
+  color: color-mix(in srgb, var(--default-color), transparent 25%); /* portfolio text transparency (def 50) */
+  margin: 1rem 0 0 0; /* def 5px */
   font-size: 16px;
   font-weight: 500;
   font-family: var(--heading-font);
@@ -934,7 +934,7 @@ section,
 .about .about-content .intro p {
   font-size: 16px;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%); /* nutshell text transparency */
 }
 
 @media (max-width: 768px) {
@@ -1474,7 +1474,7 @@ section,
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%); /* experience text transparency */
   font-size: 0.9rem;
 }
 
@@ -1509,7 +1509,7 @@ section,
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%); /* education text transparency */
   font-size: 0.9rem;
 }
 
