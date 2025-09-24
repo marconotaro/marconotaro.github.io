@@ -568,7 +568,7 @@ section,
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 @media (max-width: 768px) {
