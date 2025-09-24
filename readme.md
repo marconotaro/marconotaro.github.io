@@ -1,4 +1,6 @@
-Thanks for downloading this template!
+## Personal website
+
+I developed this website starting from the following template.
 
 Template Name: Style
 Template URL: https://bootstrapmade.com/style-bootstrap-portfolio-template/
