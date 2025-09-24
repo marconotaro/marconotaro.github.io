@@ -1,3 +1,3 @@
 ## Marco Notaro HomePage
 
-[Marco Notaro HomePage](https://marconotaro.github.io/)
+This branch stores the archived version of the website.
