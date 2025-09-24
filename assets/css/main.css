@@ -1479,7 +1479,7 @@ section,
 }
 
 .resume .experience-section .experience-cards .experience-card .card-body .achievements li::before {
-  content: "✓";
+  content: "\2713"; /* "\2022"->"•"; "\2713 -> "✓" */
   position: absolute;
   left: 0;
   top: 0;
@@ -1497,6 +1497,33 @@ section,
 
 .resume .education-section .education-timeline {
   position: relative;
+}
+
+.resume .education-section .education-timeline .education-item .education-content .achievements {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.resume .education-section .education-timeline .education-item .education-content .achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  font-size: 0.9rem;
+}
+
+.resume .education-section .education-timeline .education-item .education-content .achievements li::before {
+  content: "\2713"; /* "\2022"->"•"; "\2713 -> "✓" */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.resume .education-section .education-timeline .education-item .education-content .achievements li:last-child {
+  margin-bottom: 0;
 }
 
 .resume .education-section .education-timeline .timeline-track {
