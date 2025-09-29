@@ -433,6 +433,11 @@ h6 {
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
+  .section-title h2 {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -501,6 +506,23 @@ section,
   margin: 0;
   letter-spacing: 0.5px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 32px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title h2 {
+    font-size: 28px;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+  }
 }
 
 .section-title h2::after {
