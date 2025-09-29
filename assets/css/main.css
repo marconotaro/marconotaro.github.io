@@ -20,7 +20,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #314862; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #13447f; /* Color for headings, subheadings and title throughout the website */
@@ -502,7 +502,7 @@ section,
 .section-title h2::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 3px !important; /* def: 1px */
   display: inline-block;
   background: var(--accent-color);
   margin: 10px 10px;
@@ -3191,6 +3191,233 @@ section,
 
   .service-details .service-sidebar {
     margin-top: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Publications Section
+--------------------------------------------------------------*/
+.publications {
+  padding: 40px 0 80px 0;
+}
+
+.publications .sort-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.publications .sort-controls span {
+  margin-right: 1rem;
+  color: var(--default-color);
+  font-weight: 500;
+}
+
+.publications .sort-btn {
+  background: transparent;
+  color: var(--default-color);
+  border: 2px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.publications .sort-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  transform: translateY(-2px);
+}
+
+.publications .sort-btn.active {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.publications .publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .publications .publications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.publications .publication-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.publications .publication-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.publications .publication-image-link {
+  display: block;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.publications .publication-image-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.publications .publication-image-link::after {
+  content: 'View Publication';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.publications .publication-image-link:hover::before {
+  opacity: 0.85;
+}
+
+.publications .publication-image-link:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.publications .publication-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publications .publication-image-link:hover .publication-image {
+  transform: scale(1.1);
+}
+
+.publications .publication-image i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  opacity: 0.3;
+}
+
+.publications .publication-info {
+  padding: 1.5rem;
+}
+
+.publications .publication-year {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.publications .publication-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.publications .publication-journal {
+  font-style: italic;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.publications .publication-authors {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.publications .publication-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.publications .publication-link:hover {
+  color: var(--heading-color);
+  transform: translateX(5px);
+}
+
+.publications .publication-link i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.publications .publication-link:hover i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 576px) {
+  .publications .sort-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .publications .sort-controls span {
+    margin-right: 0;
+  }
+
+  .publications .sort-btn {
+    margin-left: 0;
+    margin-right: 0.5rem;
   }
 }
 

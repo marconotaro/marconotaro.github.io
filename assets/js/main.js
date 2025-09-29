@@ -240,4 +240,133 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Add publications function
+   */
+  function Publications() {
+    // Publications data - Replace with your actual publications from Google Scholar
+    const publications = [
+      {
+        id: 1,
+        title: "TBX3 is essential for establishment of the posterior boundary of anterior genes and upregulation of posterior genes together with HAND2 during the onset of limb bud development",
+        journal: "Development",
+        year: 2024,
+        authors: "Soussi G, Girdziusaite A, Jhanwar S, Palacio V, Notaro M, Sheth R, Zeller R and Zuniga A.",
+        link: "https://doi.org/10.1242/dev.202722",
+        imageUrl: "assets/img/publications/tbx3.png"
+      },
+      {
+        id: 2,
+        title: "PDP1 is a key metabolic gatekeeper and modulator of drug resistance in FLT3-ITD-positive acute myeloid leukemia",
+        journal: "Leukemia",
+        year: 2023,
+        authors: "Alshamleh I, Kurrle N, Makowka P, ..., Notaro M, Comoglio F, ..., et al.",
+        link: "https://doi.org/10.1038/s41375-023-02041-5",
+        imageUrl: "assets/img/publications/pdp1.webp"
+      },
+      {
+        id: 3,
+        title: "HEMDAG: a family of modular and scalable hierarchical ensemble methods to improve Gene Ontology term prediction",
+        journal: "Bioinformatics",
+        year: 2021,
+        authors: "Notaro M, Frasca M, Petrini A, Gliozzo J, Casiraghi E, Robinson PN and Valentini G",
+        link: "https://doi.org/10.1093/bioinformatics/btab485",
+        imageUrl: "assets/img/publications/hemdag-go.png"
+      },
+      {
+        id: 4,
+        title: "FZD6 triggers Wnt-signalling driven by WNT10BIVS1 expression and highlights new targets in T cell acute lymphoblastic leukemia",
+        journal: "Hematological Oncology",
+        year: 2021,
+        authors: "Cassaro A, Grillo G, Notaro M, Gliozzo J, Cairoli R and Beghini A.",
+        link: "https://doi.org/10.1002/hon.2840",
+        imageUrl: "assets/img/publications/wnt.jpg"
+      },
+      {
+        id: 5,
+        title: "Prediction of Human Phenotype Ontology terms by means of hierarchical ensemble methods",
+        journal: "BMC Bioinformatics",
+        year: 2017,
+        authors: "Notaro M, Schubach M, Robinson PN and Valentini G",
+        link: "https://doi.org/10.1186/s12859-017-1854-y",
+        imageUrl: "assets/img/publications/hemdag-hpo.png"
+      },
+    ];
+
+    const publicationsGrid = document.getElementById('publications-grid');
+    const sortNewest = document.getElementById('sort-newest');
+    const sortOldest = document.getElementById('sort-oldest');
+
+    if (!publicationsGrid || !sortNewest || !sortOldest) return;
+
+    let currentSort = 'desc'; // 'desc' for newest first, 'asc' for oldest first
+
+    function renderPublications(pubs) {
+      publicationsGrid.innerHTML = '';
+
+      pubs.forEach((pub, index) => {
+        const publicationCard = document.createElement('div');
+        publicationCard.className = 'publication-card';
+        publicationCard.setAttribute('data-aos', 'fade-up');
+        publicationCard.setAttribute('data-aos-delay', (index * 100 + 100).toString());
+
+        publicationCard.innerHTML = `
+          <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="publication-image-link">
+            <div class="publication-image" ${pub.imageUrl ? `style="background-image: url('${pub.imageUrl}')"` : ''}>
+              ${pub.imageUrl ? '' : '<i class="bi bi-file-earmark-text"></i>'}
+            </div>
+          </a>
+          <div class="publication-info">
+            <div class="publication-year">${pub.year}</div>
+            <h3  class="publication-title">${pub.title}</h3>
+            <div class="publication-journal">${pub.journal}</div>
+            <div class="publication-authors">${pub.authors}</div>
+            <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="publication-link">
+              Read Publication <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        `;
+
+        publicationsGrid.appendChild(publicationCard);
+      });
+    }
+
+    function sortPublications(direction) {
+      const sortedPubs = [...publications].sort((a, b) => {
+        if (direction === 'desc') {
+          return b.year - a.year; // Newest first
+        } else {
+          return a.year - b.year; // Oldest first
+        }
+      });
+
+      renderPublications(sortedPubs);
+
+      // Update button states
+      sortNewest.classList.toggle('active', direction === 'desc');
+      sortOldest.classList.toggle('active', direction === 'asc');
+
+      currentSort = direction;
+    }
+
+    // Event listeners for sort buttons
+    sortNewest.addEventListener('click', () => {
+      if (currentSort !== 'desc') {
+        sortPublications('desc');
+      }
+    });
+
+    sortOldest.addEventListener('click', () => {
+      if (currentSort !== 'asc') {
+        sortPublications('asc');
+      }
+    });
+
+    // Initial render
+    sortPublications('desc');
+  }
+
+  // Initialize publications when DOM is loaded
+  document.addEventListener('DOMContentLoaded', Publications);
+
 })();
