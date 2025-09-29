@@ -366,6 +366,10 @@ h6 {
   margin-top: 20px;
 }
 
+.footer .quote {
+  margin-top: 0.5rem;
+}
+
 .footer .social-links a {
   display: flex;
   align-items: center;
