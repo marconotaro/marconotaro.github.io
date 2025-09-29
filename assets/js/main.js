@@ -262,7 +262,7 @@
         year: 2023,
         authors: "Alshamleh I, Kurrle N, Makowka P, ..., Notaro M, Comoglio F, ..., et al.",
         link: "https://doi.org/10.1038/s41375-023-02041-5",
-        imageUrl: "assets/img/publications/pdp1.webp"
+        imageUrl: "assets/img/publications/pdp1.png"
       },
       {
         id: 3,
@@ -280,7 +280,7 @@
         year: 2021,
         authors: "Cassaro A, Grillo G, Notaro M, Gliozzo J, Cairoli R and Beghini A.",
         link: "https://doi.org/10.1002/hon.2840",
-        imageUrl: "assets/img/publications/wnt.jpg"
+        imageUrl: "assets/img/publications/wnt.png"
       },
       {
         id: 5,
