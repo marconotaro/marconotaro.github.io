@@ -1,12 +1,12 @@
 name: Generate Sitemap
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'sitemap.xml'
-  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - 'sitemap.xml'
+  workflow_dispatch: ## generate sitemap manually
 
 permissions:
   contents: write
