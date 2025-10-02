@@ -27,7 +27,7 @@ jobs:
         node-version: '20'
 
     - name: Install sitemap generator
-      run: npm install -g sitemap
+      run: npm install sitemap
 
     - name: Create sitemap generation script
       run: |
