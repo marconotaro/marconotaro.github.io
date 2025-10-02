@@ -21,15 +21,86 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Generate sitemap
-      uses: cicirello/generate-sitemap@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        base-url-path: https://marconotaro.github.io/
+        node-version: '20'
+
+    - name: Install sitemap generator
+      run: npm install -g sitemap
+
+    - name: Create sitemap generation script
+      run: |
+        cat > generate-sitemap.js << 'EOF'
+        #!/usr/bin/env node
+
+        /**
+         * Sitemap Generator for marconotaro.github.io
+         * Automatically generates sitemap.xml for the website
+         */
+
+        const { SitemapStream, streamToPromise } = require('sitemap');
+        const { createWriteStream } = require('fs');
+        const { resolve } = require('path');
+
+        // Base URL of your website
+        const BASE_URL = 'https://marconotaro.github.io';
+
+        // Define URLs with priority and change frequency
+        const urls = [
+          // Homepage - single-page application
+          {
+            url: '/',
+            changefreq: 'yearly',
+            priority: 1.0,
+            lastmod: new Date().toISOString()
+          },
+          // Portfolio
+          {
+            url: '/portfolio/',
+            changefreq: 'monthly',
+            priority: 1.0,
+            lastmod: new Date().toISOString()
+          }
+        ];
+
+        async function generateSitemap() {
+          const sitemap = new SitemapStream({ hostname: BASE_URL });
+          const writeStream = createWriteStream(resolve(__dirname, 'sitemap.xml'));
+
+          sitemap.pipe(writeStream);
+
+          // Write URLs to sitemap
+          urls.forEach(url => {
+            sitemap.write(url);
+          });
+
+          sitemap.end();
+
+          await streamToPromise(sitemap);
+
+          console.log('✅ Sitemap generated successfully!');
+          console.log(`📝 Total URLs: ${urls.length}`);
+          console.log('📍 Location: sitemap.xml');
+        }
+
+        // Execute the generator
+        generateSitemap().catch(err => {
+          console.error('❌ Error generating sitemap:', err);
+          process.exit(1);
+        });
+        EOF
+
+    - name: Generate sitemap
+      run: node generate-sitemap.js
+
+    - name: Clean up temporary files
+      run: rm generate-sitemap.js
 
     - name: Commit and push if changed
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add -A
+        git add sitemap.xml
         git diff --staged --quiet || git commit -m "🤖 update sitemap [skip ci]"
         git push
