@@ -1604,6 +1604,53 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills {
+  margin-bottom: 1rem;
+}
+
+.skills .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0;
+  justify-content: flex-start; /*space-evenly*/
+}
+
+.skills .skill-tag {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skills .skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(6, 92, 194, 0.3);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills .skill-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .skills .skills-container {
+    gap: 0.75rem;
+  }
+}
+
+/*--------------------------------------------------------------
 # Publications Section
 --------------------------------------------------------------*/
 .publications {
