@@ -1,3 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
+
 Disallow: /assets/img/
+Allow: /assets/img/favicon/
+
+Sitemap: https://marconotaro.github.io/sitemap.xml
