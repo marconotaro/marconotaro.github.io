@@ -268,7 +268,7 @@
         title: "PDP1 is a key metabolic gatekeeper and modulator of drug resistance in FLT3-ITD-positive acute myeloid leukemia",
         journal: "Leukemia",
         year: 2023,
-        authors: "Alshamleh I, Kurrle N, Makowka P, ..., Notaro M, Comoglio F, ..., et al.",
+        authors: "Alshamleh I, Kurrle N, ..., Notaro M, Comoglio F, ..., Schwalbe H and Serve S",
         link: "https://doi.org/10.1038/s41375-023-02041-5",
         imageUrl: "assets/img/publications/pdp1.png"
       },
@@ -298,6 +298,15 @@
         authors: "Notaro M, Schubach M, Robinson PN and Valentini G",
         link: "https://doi.org/10.1186/s12859-017-1854-y",
         imageUrl: "assets/img/publications/hemdag-hpo.png"
+      },
+      {
+        id: 6,
+        title: "In vivo CRISPR screening identifies NF1/RASA1/TP53 co-mutations and downstream MEK signaling as a common key mechanism of sinonasal tumorigenesis",
+        journal: "bioRxiv",
+        year: 2025,
+        authors: "Vu  K, Gunti S, ..., Notaro M, Comoglio F, ..., Chari R, London RN",
+        link: "https://doi.org/10.1101/2025.05.19.654661",
+        imageUrl: "assets/img/publications/crisper-screen.png"
       },
     ];
 
